@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DESIGNER.EXE - SELECTED PROJECTS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@600;700&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "headline-xl": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(26,28,28,1);
+        }
+        .brutal-shadow-hover:hover {
+            box-shadow: none;
+            transform: translate(4px, 4px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="w-full sticky top-0 z-50 bg-background border-b-4 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-label-bold text-headline-md tracking-tighter text-on-background uppercase hover:text-primary transition-colors" href="#">DESIGNER.EXE</a>
+<nav class="hidden md:flex gap-8 items-center font-label-bold text-label-bold">
+<a class="text-on-background border-b-4 border-primary-container py-1" href="#">WORK</a>
+<a class="text-on-background text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">ABOUT</a>
+<a class="text-on-background text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">RESOURCES</a>
+<a class="text-on-background text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">LABS</a>
+</nav>
+<button class="hidden md:inline-block bg-on-background text-primary-fixed border-2 border-on-background px-6 py-2 font-label-bold text-label-bold brutal-shadow brutal-shadow-hover transition-all">HIRE ME</button>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto px-gutter w-full pb-section-gap">
+<!-- Hero Section -->
+<section class="py-section-gap text-center md:text-left border-b-4 border-on-background mb-stack-lg">
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase mb-stack-md">SELECTED PROJECTS</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">A curated selection of high-impact digital experiences. Built with precision, brutalist aesthetics, and a deep understanding of user systems.</p>
+</section>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg mt-stack-lg">
+<!-- Project Card 1 -->
+<article class="bg-surface-container-lowest border-2 border-on-background brutal-shadow group transition-all">
+<div class="h-[300px] border-b-2 border-on-background overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A striking digital product interface showcasing a complex fintech dashboard. The interface uses a stark, high-contrast brutalist aesthetic with heavy black borders, solid yellow accents, and monochromatic data visualization charts. The layout is dense but highly organized, reminiscent of technical documentation or developer tools. Bright, flat studio lighting highlights the sharp edges and solid colors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjbGtzitOI6dsz4yUq7qjuvE9JYpFC3rlSVWj_az2FFPC3yiM9i-hqt4xMliDjA4dQXF5hBAIBDmMfRXCpPfXWY3UFDV0F2Co8fgjYl3ZznuFWecjrjVWwTVO-caOxS8qBpIkav5B2xHxKX4oMrqKR2m8p3_6YxixTaAx9IQdL2dAl0ADWuIYex0mnEpwTw8aXjrqhVHM6VZq7vwtvfDdGutkQXSfu7F1GW8dEr9G0m2bF4dVaz2OaoA"/>
+</div>
+<div class="p-stack-lg flex flex-col h-[calc(100%-300px)] justify-between">
+<div>
+<div class="flex gap-2 mb-stack-md flex-wrap">
+<span class="border border-on-background px-3 py-1 bg-surface-container-lowest font-label-bold text-code-sm text-on-background">Fintech</span>
+<span class="border border-on-background px-3 py-1 bg-surface-container font-label-bold text-code-sm text-on-background">Dashboard</span>
+</div>
+<h2 class="font-headline-lg text-headline-md text-on-background uppercase mb-stack-sm group-hover:text-primary transition-colors">Yield Protocol UI</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg line-clamp-3">A robust trading interface designed for high-frequency crypto traders. Emphasizes data density, rapid execution, and a clear visual hierarchy using high-contrast brutalist elements.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-background uppercase hover:text-primary transition-colors" href="#">
+                        View Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 2 -->
+<article class="bg-surface-container-lowest border-2 border-on-background brutal-shadow group transition-all">
+<div class="h-[300px] border-b-2 border-on-background overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bold, typography-driven website landing page for a creative agency. The design features massive, chunky black text on a bright yellow background. Elements overlap slightly with hard black shadows, creating a neo-brutalist feel. The layout includes an asymmetric grid of project thumbnails. The overall aesthetic is loud, confident, and utilitarian." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqTrdg_8p5f3-LO-7Dpwf4AFSNfP1sqqhXK9tZb8_h0MyHMhFkxwptYE_trSAH8pPUrPJrjCT_3NknMSN_ysyk7exhziJhFsxlgmGVhUZitnV9cyOCY32QtmpGb44OvOX3xqzuSVlHvwg7WsOtkuBGmbwgKMwTp4KxiMXVzWWoBA5WJ1qxP_Ppqzoh9XTirDAeGplyUHX8KLV33Z1Lv51U8-pY5lWZ9qxAASOnJe6wwAJtV7i1BUquAQ"/>
+</div>
+<div class="p-stack-lg flex flex-col h-[calc(100%-300px)] justify-between">
+<div>
+<div class="flex gap-2 mb-stack-md flex-wrap">
+<span class="border border-on-background px-3 py-1 bg-surface-container-lowest font-label-bold text-code-sm text-on-background">Branding</span>
+<span class="border border-on-background px-3 py-1 bg-surface-container font-label-bold text-code-sm text-on-background">Web Design</span>
+</div>
+<h2 class="font-headline-lg text-headline-md text-on-background uppercase mb-stack-sm group-hover:text-primary transition-colors">Studio VORTEX</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg line-clamp-3">Complete digital rebrand and platform design for an avant-garde architecture firm. The site uses structural grid layouts and aggressive typography to mirror their physical work.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-background uppercase hover:text-primary transition-colors" href="#">
+                        View Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 3 -->
+<article class="bg-surface-container-lowest border-2 border-on-background brutal-shadow group transition-all">
+<div class="h-[300px] border-b-2 border-on-background overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A close-up of a mobile application interface focused on developer tools. The UI is starkly minimalist with pure white backgrounds, solid black borders, and monospaced typography resembling code blocks. A vivid yellow button with a hard shadow provides the only color contrast. The design feels highly functional, industrial, and optimized for quick interactions." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHuc8sKcXXStYAY0u_paxaPNr9htyETxzLzhmLYzPN2H7GePdOwOB3WwQcq4RjAIBoWTXl2lmJ43sbYp0OTi0BCa_WirlecsnYcZbzGkjEIp5O7Y0mFfUzVps5vVhUyYT57dCowWSQPo57LUcm48cyoIMSlGbgzcU_KUQHmh40M_d8E9cx5SDQmga_p9dQX9Sr7Y85bhMNuwq19nfCdboVsF4dDoK51lcGY10rlCIk7laohfsErU1F1A"/>
+</div>
+<div class="p-stack-lg flex flex-col h-[calc(100%-300px)] justify-between">
+<div>
+<div class="flex gap-2 mb-stack-md flex-wrap">
+<span class="border border-on-background px-3 py-1 bg-surface-container-lowest font-label-bold text-code-sm text-on-background">Mobile App</span>
+<span class="border border-on-background px-3 py-1 bg-surface-container font-label-bold text-code-sm text-on-background">Dev Tools</span>
+</div>
+<h2 class="font-headline-lg text-headline-md text-on-background uppercase mb-stack-sm group-hover:text-primary transition-colors">Ping.CLI App</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg line-clamp-3">Bringing the power of command-line interfaces to mobile. A highly technical companion app for sysadmins featuring a custom keyboard and terminal-inspired UI components.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-background uppercase hover:text-primary transition-colors" href="#">
+                        View Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+<!-- Project Card 4 -->
+<article class="bg-surface-container-lowest border-2 border-on-background brutal-shadow group transition-all">
+<div class="h-[300px] border-b-2 border-on-background overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An isometric view of a highly structured e-commerce platform interface. The layout relies on strict 2px black grid lines separating white and light grey content blocks. Product images are presented raw, without backgrounds. Typography is tightly tracked and sans-serif. The overall vibe is clinical, utilitarian, and focused entirely on product data and conversion." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiBHKg_KM4WnNnNVYbzdo0-v509zKhQSAXzaWcCLLWn4Ff22maip_gSyo45HqKTe3q8T8t2th-chPs7jNfIpoKO1IGTekI46G2yAgoUgOD2BqN4BgXAFm0joPGDiP1gAcbG19QreJT6pyugQgs6um5NTODHkxeJNozf2nZi3Rxy2OaH7isZ6vzdW72rvq_QBkclIelS6YKWRroJtDTrW9-jT-3XJCAm9tOmzjiTBUijvxycqe3qitbYg"/>
+</div>
+<div class="p-stack-lg flex flex-col h-[calc(100%-300px)] justify-between">
+<div>
+<div class="flex gap-2 mb-stack-md flex-wrap">
+<span class="border border-on-background px-3 py-1 bg-surface-container-lowest font-label-bold text-code-sm text-on-background">E-Commerce</span>
+<span class="border border-on-background px-3 py-1 bg-surface-container font-label-bold text-code-sm text-on-background">System Design</span>
+</div>
+<h2 class="font-headline-lg text-headline-md text-on-background uppercase mb-stack-sm group-hover:text-primary transition-colors">Supply_Chain Store</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-lg line-clamp-3">A brutalist take on e-commerce for a tech-hardware retailer. Stripped of all marketing fluff, the interface focuses purely on technical specifications and streamlined purchasing flows.</p>
+</div>
+<a class="inline-flex items-center gap-2 font-label-bold text-label-bold text-on-background uppercase hover:text-primary transition-colors" href="#">
+                        View Case Study <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-on-background text-primary-fixed border-t-4 border-on-background">
+<div class="flex flex-col md:flex-row justify-between items-center p-stack-lg gap-stack-md max-w-container-max mx-auto">
+<span class="font-label-bold text-body-md text-primary-fixed">©2024 DESIGNER.EXE. ALL RIGHTS RESERVED.</span>
+<nav class="flex gap-stack-md font-label-bold text-label-bold uppercase">
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">GITHUB</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">LINKEDIN</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">READCV</a>
+</nav>
+</div>
+</footer>
+</body></html>

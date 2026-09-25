@@ -1,0 +1,280 @@
+﻿{
+    "designSystems":  [
+                          {
+                              "designSystem":  {
+                                                   "displayName":  "High-Voltage Portfolio",
+                                                   "styleGuidelines":  "## Brand \u0026 Style\n\nThis design system is built for a personal portfolio that demands attention. It draws heavily from **Brutalism** and **High-Contrast Modernism**, inspired by the high-utility, developer-centric aesthetic of technical documentation sites. The brand personality is energetic, confident, and utilitarian.\n\nThe UI should evoke a sense of \"industrial polish\"—where raw structural elements like heavy borders and bold primary colors meet refined typography and generous white space. It targets a developer-adjacent audience that appreciates clarity, performance, and a \"no-fluff\" approach to design.\n\n**Key Stylistic Pillars:**\n- **High-Contrast Foundations:** Pure blacks and vibrant yellows create a visual vibration that screams \"action.\"\n- **Structural Integrity:** Heavy, 2px to 4px solid black borders serve as the primary containment strategy.\n- **Micro-interactions:** While the static look is brutalist, interactions should feel fluid and sophisticated, using hard-shadow offsets (neo-brutalism) rather than traditional blurs.\n\n## Layout \u0026 Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop and a **Fluid Stack** on mobile.\n\n- **Desktop:** A 12-column grid with a fixed maximum width. Gutters are kept wide (24px) to emphasize the separation of \"blocks.\"\n- **Hero Section:** Should always span the full viewport width with a `Primary` background color, creating a massive impact upon landing.\n- **Project Grid:** 2-column or 3-column layout. Each card should feel like a distinct \"module\" or \"component.\"\n- **Section Gaps:** Use aggressive vertical spacing (120px+) between sections to allow the bold elements to breathe.\n\n**Responsive Behavior:** On tablet, the 12-column grid collapses to 6. On mobile, all items stack vertically with 16px side margins.\n\n## Elevation \u0026 Depth\n\nThis system rejects soft shadows and ambient light. Instead, it uses **Hard-Offset Shadows** and **Bold Outlines** to communicate depth.\n\n- **The \"Lift\" Effect:** Components like cards and primary buttons use a solid black \"shadow\" offset (e.g., 4px down, 4px right) with no blur. This creates a physical, tactile feel reminiscent of paper or 2D-platformer buttons.\n- **Layering:** When an element is hovered, the \"shadow\" disappears as the element \"depresses\" into the page (moving 4px down/right), or the shadow grows to 8px to simulate lifting higher.\n- **Borders:** Every container (cards, inputs, buttons) must have a minimum 2px solid black border.\n\n## Components\n\n### Buttons\n- **Primary:** Black background, Yellow text, 2px border, 4px hard-offset shadow. On hover, the shadow disappears and the button \"moves\" to cover its previous shadow location.\n- **Secondary:** Yellow background, Black text, 2px border.\n- **Ghost:** White background, Black text, 2px border, no shadow.\n\n### Project Cards\n- Solid white background with a 2px black border.\n- 4px black hard-offset shadow.\n- Top-aligned image with a 1px bottom border separating it from the content.\n- Tags inside the card use the `label-bold` typography and a light grey background.\n\n### Input Fields\n- White background, 2px black border. \n- Focus state: The border weight increases to 3px or changes to the Primary (Yellow) color.\n- Placeholder text in a muted grey version of `Geist`.\n\n### Navigation\n- Clean, horizontal layout.\n- Use `JetBrains Mono` for nav links to give a \"file structure\" feel.\n- Active state: A thick (4px) yellow underline or a yellow \"highlighter\" box behind the text.\n\n### Chips/Tags\n- Small, rounded rectangles with 1px borders.\n- Backgrounds alternate between White and Neutral (#F4F4F4) to categorize project types (e.g., \"React\", \"UI/UX\").",
+                                                   "theme":  {
+                                                                 "bodyFont":  "GEIST",
+                                                                 "bodyFontFamily":  "Geist",
+                                                                 "colorMode":  "LIGHT",
+                                                                 "colorVariant":  "FIDELITY",
+                                                                 "customColor":  "#f1d302",
+                                                                 "designMd":  "---\nname: High-Voltage Portfolio\ncolors:\n  surface: \u0027#f9f9f9\u0027\n  surface-dim: \u0027#dadada\u0027\n  surface-bright: \u0027#f9f9f9\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#f3f3f3\u0027\n  surface-container: \u0027#eeeeee\u0027\n  surface-container-high: \u0027#e8e8e8\u0027\n  surface-container-highest: \u0027#e2e2e2\u0027\n  on-surface: \u0027#1a1c1c\u0027\n  on-surface-variant: \u0027#4c4732\u0027\n  inverse-surface: \u0027#2f3131\u0027\n  inverse-on-surface: \u0027#f1f1f1\u0027\n  outline: \u0027#7d7760\u0027\n  outline-variant: \u0027#cec6ab\u0027\n  surface-tint: \u0027#6d5e00\u0027\n  primary: \u0027#6d5e00\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#f1d302\u0027\n  on-primary-container: \u0027#695b00\u0027\n  inverse-primary: \u0027#e2c600\u0027\n  secondary: \u0027#5e5e5e\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#e2e2e2\u0027\n  on-secondary-container: \u0027#646464\u0027\n  tertiary: \u0027#5d5f5f\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#d3d3d3\u0027\n  on-tertiary-container: \u0027#595b5b\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#ffe241\u0027\n  primary-fixed-dim: \u0027#e2c600\u0027\n  on-primary-fixed: \u0027#211b00\u0027\n  on-primary-fixed-variant: \u0027#524700\u0027\n  secondary-fixed: \u0027#e2e2e2\u0027\n  secondary-fixed-dim: \u0027#c6c6c6\u0027\n  on-secondary-fixed: \u0027#1b1b1b\u0027\n  on-secondary-fixed-variant: \u0027#474747\u0027\n  tertiary-fixed: \u0027#e2e2e2\u0027\n  tertiary-fixed-dim: \u0027#c6c6c7\u0027\n  on-tertiary-fixed: \u0027#1a1c1c\u0027\n  on-tertiary-fixed-variant: \u0027#454747\u0027\n  background: \u0027#f9f9f9\u0027\n  on-background: \u0027#1a1c1c\u0027\n  surface-variant: \u0027#e2e2e2\u0027\ntypography:\n  headline-xl:\n    fontFamily: Space Grotesk\n    fontSize: 72px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.03em\n  headline-xl-mobile:\n    fontFamily: Space Grotesk\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Space Grotesk\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.2\u0027\n  headline-md:\n    fontFamily: Space Grotesk\n    fontSize: 32px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.3\u0027\n  body-lg:\n    fontFamily: Geist\n    fontSize: 20px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.6\u0027\n  body-md:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.5\u0027\n  label-bold:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.2\u0027\n  code-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.4\u0027\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n  section-gap: 120px\n---\n\n## Brand \u0026 Style\n\nThis design system is built for a personal portfolio that demands attention. It draws heavily from **Brutalism** and **High-Contrast Modernism**, inspired by the high-utility, developer-centric aesthetic of technical documentation sites. The brand personality is energetic, confident, and utilitarian.\n\nThe UI should evoke a sense of \"industrial polish\"—where raw structural elements like heavy borders and bold primary colors meet refined typography and generous white space. It targets a developer-adjacent audience that appreciates clarity, performance, and a \"no-fluff\" approach to design.\n\n**Key Stylistic Pillars:**\n- **High-Contrast Foundations:** Pure blacks and vibrant yellows create a visual vibration that screams \"action.\"\n- **Structural Integrity:** Heavy, 2px to 4px solid black borders serve as the primary containment strategy.\n- **Micro-interactions:** While the static look is brutalist, interactions should feel fluid and sophisticated, using hard-shadow offsets (neo-brutalism) rather than traditional blurs.\n\n## Colors\n\nThe palette is intentionally restricted to maximize impact. \n\n- **Primary (#F1D302):** Used for hero backgrounds, primary call-to-actions, and text highlights. It represents energy and technical documentation \"warning\" or \"important\" motifs.\n- **Secondary (#000000):** The structural backbone. Used for all borders, headings, and primary buttons.\n- **Tertiary (#FFFFFF):** Provides the necessary \"breathing room\" to ensure the high-contrast elements don\u0027t overwhelm the user.\n- **Neutral (#F4F4F4):** Used for subtle secondary backgrounds or code-snippet blocks to maintain a developer-friendly feel.\n\n**Application Rule:** Never use gradients. All color transitions must be hard-edged. Use high-contrast pairings only (Black on Yellow, Yellow on Black, Black on White).\n\n## Typography\n\nThe typographic hierarchy relies on a \"Technical Brutalist\" mix.\n\n- **Headlines (Space Grotesk):** A geometric sans with quirky terminals that feel both futuristic and engineered. Use tight letter spacing for large displays to create a dense, \"heavy\" visual block.\n- **Body (Geist):** A high-performance typeface designed for developers. It offers extreme legibility for project descriptions and case studies.\n- **Labels \u0026 UI (JetBrains Mono):** Monospaced fonts are used for metadata (dates, tags, categories) to lean into the developer-friendly aesthetic.\n\n**Formatting:** Headings should always be in Secondary (Black). Use `Primary` (Yellow) as a background \"highlighter\" effect behind key words in headlines.\n\n## Layout \u0026 Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop and a **Fluid Stack** on mobile.\n\n- **Desktop:** A 12-column grid with a fixed maximum width. Gutters are kept wide (24px) to emphasize the separation of \"blocks.\"\n- **Hero Section:** Should always span the full viewport width with a `Primary` background color, creating a massive impact upon landing.\n- **Project Grid:** 2-column or 3-column layout. Each card should feel like a distinct \"module\" or \"component.\"\n- **Section Gaps:** Use aggressive vertical spacing (120px+) between sections to allow the bold elements to breathe.\n\n**Responsive Behavior:** On tablet, the 12-column grid collapses to 6. On mobile, all items stack vertically with 16px side margins.\n\n## Elevation \u0026 Depth\n\nThis system rejects soft shadows and ambient light. Instead, it uses **Hard-Offset Shadows** and **Bold Outlines** to communicate depth.\n\n- **The \"Lift\" Effect:** Components like cards and primary buttons use a solid black \"shadow\" offset (e.g., 4px down, 4px right) with no blur. This creates a physical, tactile feel reminiscent of paper or 2D-platformer buttons.\n- **Layering:** When an element is hovered, the \"shadow\" disappears as the element \"depresses\" into the page (moving 4px down/right), or the shadow grows to 8px to simulate lifting higher.\n- **Borders:** Every container (cards, inputs, buttons) must have a minimum 2px solid black border.\n\n## Shapes\n\nWhile the style is brutalist, we use **Rounded (Level 2)** corners to prevent the UI from feeling hostile or overly \"dated.\" \n\n- **Base Radius:** 0.5rem (8px). This applies to buttons, project cards, and input fields.\n- **Large Components:** Hero containers or featured image cards use 1rem (16px) to soften the large masses of color.\n- **Interactive Elements:** Buttons and tags maintain the 8px radius for a consistent \"clickable\" language.\n\n## Components\n\n### Buttons\n- **Primary:** Black background, Yellow text, 2px border, 4px hard-offset shadow. On hover, the shadow disappears and the button \"moves\" to cover its previous shadow location.\n- **Secondary:** Yellow background, Black text, 2px border.\n- **Ghost:** White background, Black text, 2px border, no shadow.\n\n### Project Cards\n- Solid white background with a 2px black border.\n- 4px black hard-offset shadow.\n- Top-aligned image with a 1px bottom border separating it from the content.\n- Tags inside the card use the `label-bold` typography and a light grey background.\n\n### Input Fields\n- White background, 2px black border. \n- Focus state: The border weight increases to 3px or changes to the Primary (Yellow) color.\n- Placeholder text in a muted grey version of `Geist`.\n\n### Navigation\n- Clean, horizontal layout.\n- Use `JetBrains Mono` for nav links to give a \"file structure\" feel.\n- Active state: A thick (4px) yellow underline or a yellow \"highlighter\" box behind the text.\n\n### Chips/Tags\n- Small, rounded rectangles with 1px borders.\n- Backgrounds alternate between White and Neutral (#F4F4F4) to categorize project types (e.g., \"React\", \"UI/UX\").",
+                                                                 "font":  "SPACE_GROTESK",
+                                                                 "headlineFont":  "SPACE_GROTESK",
+                                                                 "headlineFontFamily":  "Space Grotesk",
+                                                                 "labelFont":  "JETBRAINS_MONO",
+                                                                 "labelFontFamily":  "Jetbrains Mono",
+                                                                 "namedColors":  {
+                                                                                     "background":  "#f9f9f9",
+                                                                                     "error":  "#ba1a1a",
+                                                                                     "error_container":  "#ffdad6",
+                                                                                     "inverse_on_surface":  "#f1f1f1",
+                                                                                     "inverse_primary":  "#e2c600",
+                                                                                     "inverse_surface":  "#2f3131",
+                                                                                     "on_background":  "#1a1c1c",
+                                                                                     "on_error":  "#ffffff",
+                                                                                     "on_error_container":  "#93000a",
+                                                                                     "on_primary":  "#ffffff",
+                                                                                     "on_primary_container":  "#695b00",
+                                                                                     "on_primary_fixed":  "#211b00",
+                                                                                     "on_primary_fixed_variant":  "#524700",
+                                                                                     "on_secondary":  "#ffffff",
+                                                                                     "on_secondary_container":  "#646464",
+                                                                                     "on_secondary_fixed":  "#1b1b1b",
+                                                                                     "on_secondary_fixed_variant":  "#474747",
+                                                                                     "on_surface":  "#1a1c1c",
+                                                                                     "on_surface_variant":  "#4c4732",
+                                                                                     "on_tertiary":  "#ffffff",
+                                                                                     "on_tertiary_container":  "#595b5b",
+                                                                                     "on_tertiary_fixed":  "#1a1c1c",
+                                                                                     "on_tertiary_fixed_variant":  "#454747",
+                                                                                     "outline":  "#7d7760",
+                                                                                     "outline_variant":  "#cec6ab",
+                                                                                     "primary":  "#6d5e00",
+                                                                                     "primary_container":  "#f1d302",
+                                                                                     "primary_fixed":  "#ffe241",
+                                                                                     "primary_fixed_dim":  "#e2c600",
+                                                                                     "secondary":  "#5e5e5e",
+                                                                                     "secondary_container":  "#e2e2e2",
+                                                                                     "secondary_fixed":  "#e2e2e2",
+                                                                                     "secondary_fixed_dim":  "#c6c6c6",
+                                                                                     "surface":  "#f9f9f9",
+                                                                                     "surface_bright":  "#f9f9f9",
+                                                                                     "surface_container":  "#eeeeee",
+                                                                                     "surface_container_high":  "#e8e8e8",
+                                                                                     "surface_container_highest":  "#e2e2e2",
+                                                                                     "surface_container_low":  "#f3f3f3",
+                                                                                     "surface_container_lowest":  "#ffffff",
+                                                                                     "surface_dim":  "#dadada",
+                                                                                     "surface_tint":  "#6d5e00",
+                                                                                     "surface_variant":  "#e2e2e2",
+                                                                                     "tertiary":  "#5d5f5f",
+                                                                                     "tertiary_container":  "#d3d3d3",
+                                                                                     "tertiary_fixed":  "#e2e2e2",
+                                                                                     "tertiary_fixed_dim":  "#c6c6c7"
+                                                                                 },
+                                                                 "overrideNeutralColor":  "#f4f4f4",
+                                                                 "overridePrimaryColor":  "#f1d302",
+                                                                 "overrideSecondaryColor":  "#000000",
+                                                                 "overrideTertiaryColor":  "#ffffff",
+                                                                 "roundness":  "ROUND_EIGHT",
+                                                                 "spacing":  {
+                                                                                 "container-max":  "1280px",
+                                                                                 "gutter":  "24px",
+                                                                                 "margin-mobile":  "16px",
+                                                                                 "section-gap":  "120px",
+                                                                                 "stack-lg":  "32px",
+                                                                                 "stack-md":  "16px",
+                                                                                 "stack-sm":  "8px"
+                                                                             },
+                                                                 "spacingScale":  2,
+                                                                 "typography":  {
+                                                                                    "body-lg":  {
+                                                                                                    "fontFamily":  "Geist",
+                                                                                                    "fontSize":  "20px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.6"
+                                                                                                },
+                                                                                    "body-md":  {
+                                                                                                    "fontFamily":  "Geist",
+                                                                                                    "fontSize":  "16px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.5"
+                                                                                                },
+                                                                                    "code-sm":  {
+                                                                                                    "fontFamily":  "JetBrains Mono",
+                                                                                                    "fontSize":  "13px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.4"
+                                                                                                },
+                                                                                    "headline-lg":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "48px",
+                                                                                                        "fontWeight":  "700",
+                                                                                                        "lineHeight":  "1.2"
+                                                                                                    },
+                                                                                    "headline-md":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "32px",
+                                                                                                        "fontWeight":  "600",
+                                                                                                        "lineHeight":  "1.3"
+                                                                                                    },
+                                                                                    "headline-xl":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "72px",
+                                                                                                        "fontWeight":  "700",
+                                                                                                        "letterSpacing":  "-0.03em",
+                                                                                                        "lineHeight":  "1.1"
+                                                                                                    },
+                                                                                    "headline-xl-mobile":  {
+                                                                                                               "fontFamily":  "Space Grotesk",
+                                                                                                               "fontSize":  "48px",
+                                                                                                               "fontWeight":  "700",
+                                                                                                               "letterSpacing":  "-0.02em",
+                                                                                                               "lineHeight":  "1.1"
+                                                                                                           },
+                                                                                    "label-bold":  {
+                                                                                                       "fontFamily":  "JetBrains Mono",
+                                                                                                       "fontSize":  "14px",
+                                                                                                       "fontWeight":  "700",
+                                                                                                       "lineHeight":  "1.2"
+                                                                                                   }
+                                                                                }
+                                                             }
+                                               },
+                              "name":  "assets/4d261d3cd20a4ac0bf05166473f595b9",
+                              "version":  "1"
+                          },
+                          {
+                              "designSystem":  {
+                                                   "displayName":  "Electric Brutalist",
+                                                   "styleGuidelines":  "## Brand \u0026 Style\n\nThe design system is a high-energy, technical framework that balances the raw structural intensity of **Brutalism** with a high-contrast, digital-first aesthetic. It is engineered for impact, favoring clear hierarchies and \"loud\" visual signals over subtle transitions. The brand personality is unapologetically technical, confident, and precise.\n\nThe UI evokes a \"live-terminal\" energy—where structural elements like heavy borders and high-visibility cyan accents meet sophisticated developer-centric typography. It targets an audience that values performance, transparency, and a distinctive visual voice that stands out in a sea of generic SaaS interfaces.\n\n**Key Stylistic Pillars:**\n- **High-Contrast Digitalism:** A pairing of deep blacks and electric cyan creates a visual vibration that feels energetic and forward-looking.\n- **Neo-Brutalist Structure:** Heavy, 2px to 4px solid black borders serve as the primary containment strategy, rejecting the \"softness\" of traditional modern UI.\n- **Industrial Tactility:** Interactions emphasize physical movement through hard-offset shadows and \"depressing\" button states, giving digital actions a mechanical feel.\n\n## Layout \u0026 Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to enforce a structured, modular feel.\n\n- **Desktop (12-column):** Uses a 1280px max-width container with 24px gutters. The layout should feel like a series of interconnected blocks.\n- **Sectioning:** Vertical rhythm is aggressive. Use 120px gaps between major sections to provide the breathing room required for high-contrast elements to shine.\n- **The Hero Block:** Always spans the full viewport width, utilizing the Primary color as a solid background to create an immediate, high-energy impact.\n- **Mobile Adaption:** Transitions to a fluid stack with 16px margins. Containers should retain their heavy borders even when stacked.\n\n## Elevation \u0026 Depth\n\nThis system rejects soft shadows in favor of **Hard-Offset Depth**, emphasizing physical structure over optical realism.\n\n- **The Hard Offset:** Interactive elements and containers use a solid Black shadow (no blur), typically offset 4px down and 4px right. \n- **State Changes:** On hover, elements should \"depress\" (translate 4px down/right) while the shadow is hidden, or the shadow should expand (8px offset) to simulate an upward lift.\n- **Containment:** Every interactive or content-heavy component must be bounded by a minimum 2px solid black border. Depth is communicated through these borders and their accompanying solid shadows.\n\n## Components\n\n### Buttons\n- **Primary:** Black background, Electric Cyan text, 2px black border, 4px hard-offset shadow.\n- **Secondary:** Electric Cyan background, Black text, 2px black border.\n- **Ghost:** White background, Black text, 2px black border, no shadow.\n\n### Project Cards\n- Solid white or neutral-grey background with a 2px black border and 4px black hard-offset shadow.\n- Visual content should be separated from text by a 1px solid black divider.\n- Category tags use `label-bold` in JetBrains Mono.\n\n### Input Fields\n- White background with a 2px black border.\n- **Focus State:** The border color shifts to Electric Cyan or increases in weight to 3px to signal activity.\n\n### Navigation\n- Horizontal layout using `JetBrains Mono`.\n- **Active State:** A 4px Electric Cyan underline or a solid Cyan highlight box behind the link text.\n\n### Chips \u0026 Tags\n- Small rounded rectangles with 1px black borders. Use Primary (Cyan) for high-priority tags and Neutral for secondary metadata.",
+                                                   "theme":  {
+                                                                 "bodyFont":  "GEIST",
+                                                                 "bodyFontFamily":  "Geist",
+                                                                 "colorMode":  "LIGHT",
+                                                                 "colorVariant":  "FIDELITY",
+                                                                 "customColor":  "#00f0ff",
+                                                                 "designMd":  "---\nname: Electric Brutalist\ncolors:\n  surface: \u0027#f3fbfb\u0027\n  surface-dim: \u0027#d3dcdc\u0027\n  surface-bright: \u0027#f3fbfb\u0027\n  surface-container-lowest: \u0027#ffffff\u0027\n  surface-container-low: \u0027#edf5f6\u0027\n  surface-container: \u0027#e7eff0\u0027\n  surface-container-high: \u0027#e1eaea\u0027\n  surface-container-highest: \u0027#dce4e5\u0027\n  on-surface: \u0027#151d1e\u0027\n  on-surface-variant: \u0027#3b494b\u0027\n  inverse-surface: \u0027#2a3233\u0027\n  inverse-on-surface: \u0027#eaf2f3\u0027\n  outline: \u0027#6a7a7b\u0027\n  outline-variant: \u0027#b9cacb\u0027\n  surface-tint: \u0027#006970\u0027\n  primary: \u0027#006970\u0027\n  on-primary: \u0027#ffffff\u0027\n  primary-container: \u0027#00f0ff\u0027\n  on-primary-container: \u0027#006970\u0027\n  inverse-primary: \u0027#00dbe9\u0027\n  secondary: \u0027#5e5e5e\u0027\n  on-secondary: \u0027#ffffff\u0027\n  secondary-container: \u0027#e2e2e2\u0027\n  on-secondary-container: \u0027#646464\u0027\n  tertiary: \u0027#5d5f5f\u0027\n  on-tertiary: \u0027#ffffff\u0027\n  tertiary-container: \u0027#d9d9d9\u0027\n  on-tertiary-container: \u0027#5d5f5f\u0027\n  error: \u0027#ba1a1a\u0027\n  on-error: \u0027#ffffff\u0027\n  error-container: \u0027#ffdad6\u0027\n  on-error-container: \u0027#93000a\u0027\n  primary-fixed: \u0027#7df4ff\u0027\n  primary-fixed-dim: \u0027#00dbe9\u0027\n  on-primary-fixed: \u0027#002022\u0027\n  on-primary-fixed-variant: \u0027#004f54\u0027\n  secondary-fixed: \u0027#e2e2e2\u0027\n  secondary-fixed-dim: \u0027#c6c6c6\u0027\n  on-secondary-fixed: \u0027#1b1b1b\u0027\n  on-secondary-fixed-variant: \u0027#474747\u0027\n  tertiary-fixed: \u0027#e2e2e2\u0027\n  tertiary-fixed-dim: \u0027#c6c6c7\u0027\n  on-tertiary-fixed: \u0027#1a1c1c\u0027\n  on-tertiary-fixed-variant: \u0027#454747\u0027\n  background: \u0027#f3fbfb\u0027\n  on-background: \u0027#151d1e\u0027\n  surface-variant: \u0027#dce4e5\u0027\n  surface-neutral: \u0027#F4F4F4\u0027\n  border-heavy: \u0027#000000\u0027\n  electric-cyan: \u0027#00F0FF\u0027\ntypography:\n  headline-xl:\n    fontFamily: Space Grotesk\n    fontSize: 72px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.03em\n  headline-xl-mobile:\n    fontFamily: Space Grotesk\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.1\u0027\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Space Grotesk\n    fontSize: 48px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.2\u0027\n  headline-md:\n    fontFamily: Space Grotesk\n    fontSize: 32px\n    fontWeight: \u0027600\u0027\n    lineHeight: \u00271.3\u0027\n  body-lg:\n    fontFamily: Geist\n    fontSize: 20px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.6\u0027\n  body-md:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.5\u0027\n  label-bold:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: \u0027700\u0027\n    lineHeight: \u00271.2\u0027\n  code-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: \u0027400\u0027\n    lineHeight: \u00271.4\u0027\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n  section-gap: 120px\n---\n\n## Brand \u0026 Style\n\nThe design system is a high-energy, technical framework that balances the raw structural intensity of **Brutalism** with a high-contrast, digital-first aesthetic. It is engineered for impact, favoring clear hierarchies and \"loud\" visual signals over subtle transitions. The brand personality is unapologetically technical, confident, and precise.\n\nThe UI evokes a \"live-terminal\" energy—where structural elements like heavy borders and high-visibility cyan accents meet sophisticated developer-centric typography. It targets an audience that values performance, transparency, and a distinctive visual voice that stands out in a sea of generic SaaS interfaces.\n\n**Key Stylistic Pillars:**\n- **High-Contrast Digitalism:** A pairing of deep blacks and electric cyan creates a visual vibration that feels energetic and forward-looking.\n- **Neo-Brutalist Structure:** Heavy, 2px to 4px solid black borders serve as the primary containment strategy, rejecting the \"softness\" of traditional modern UI.\n- **Industrial Tactility:** Interactions emphasize physical movement through hard-offset shadows and \"depressing\" button states, giving digital actions a mechanical feel.\n\n## Colors\n\nThe palette is restricted to high-frequency tones to ensure maximum legibility and brand recognition. All color applications must be flat; gradients are strictly prohibited to maintain the brutalist integrity.\n\n- **Primary (#00F0FF):** A vibrant, electric cyan. Used for hero backgrounds, primary call-to-actions, and \"highlighter\" text effects. It symbolizes innovation and high-speed data.\n- **Secondary (#000000):** The structural backbone. Used for all borders, headings, and primary button surfaces.\n- **Tertiary (#FFFFFF):** The essential void. Provides massive white space to ensure high-contrast elements remain readable and don\u0027t cause visual fatigue.\n- **Neutral (#F4F4F4):** Used for code-snippet blocks and secondary containers to provide subtle depth without breaking the high-contrast rules.\n\n**Application Rule:** Use only hard-edged transitions. Pairings should prioritize contrast: Black on Cyan, Cyan on Black, or Black on White.\n\n## Typography\n\nThe typography leverages a \"Technical Brutalist\" scale, mixing geometric quirkiness with high-performance utility.\n\n- **Headlines (Space Grotesk):** Features aggressive, geometric terminals. Use tight tracking for larger sizes to create a dense, block-like visual presence. \n- **Body (Geist):** Optimized for technical reading and extreme legibility in long-form project descriptions or documentation.\n- **Labels \u0026 UI (JetBrains Mono):** Used for metadata, tags, and small utility text to reinforce the developer-centric, \"under-the-hood\" aesthetic.\n\n**Formatting Guidance:** Headings are primarily Black. The Primary (Electric Cyan) color should be used as a background highlight (rectangular box) behind focal words in headlines to create an \"active\" reading effect.\n\n## Layout \u0026 Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to enforce a structured, modular feel.\n\n- **Desktop (12-column):** Uses a 1280px max-width container with 24px gutters. The layout should feel like a series of interconnected blocks.\n- **Sectioning:** Vertical rhythm is aggressive. Use 120px gaps between major sections to provide the breathing room required for high-contrast elements to shine.\n- **The Hero Block:** Always spans the full viewport width, utilizing the Primary color as a solid background to create an immediate, high-energy impact.\n- **Mobile Adaption:** Transitions to a fluid stack with 16px margins. Containers should retain their heavy borders even when stacked.\n\n## Elevation \u0026 Depth\n\nThis system rejects soft shadows in favor of **Hard-Offset Depth**, emphasizing physical structure over optical realism.\n\n- **The Hard Offset:** Interactive elements and containers use a solid Black shadow (no blur), typically offset 4px down and 4px right. \n- **State Changes:** On hover, elements should \"depress\" (translate 4px down/right) while the shadow is hidden, or the shadow should expand (8px offset) to simulate an upward lift.\n- **Containment:** Every interactive or content-heavy component must be bounded by a minimum 2px solid black border. Depth is communicated through these borders and their accompanying solid shadows.\n\n## Shapes\n\nThe shape language is primarily structural but moderated by **Rounded (Level 2)** corners to maintain a contemporary, user-friendly feel.\n\n- **Standard Radius (0.5rem):** Applied to buttons, input fields, and standard cards to create a consistent interactive language.\n- **Large Radius (1rem):** Used for featured project cards and large hero images to soften the visual impact of large color masses.\n- **Consistency:** Never mix sharp corners with rounded corners within the same component hierarchy.\n\n## Components\n\n### Buttons\n- **Primary:** Black background, Electric Cyan text, 2px black border, 4px hard-offset shadow.\n- **Secondary:** Electric Cyan background, Black text, 2px black border.\n- **Ghost:** White background, Black text, 2px black border, no shadow.\n\n### Project Cards\n- Solid white or neutral-grey background with a 2px black border and 4px black hard-offset shadow.\n- Visual content should be separated from text by a 1px solid black divider.\n- Category tags use `label-bold` in JetBrains Mono.\n\n### Input Fields\n- White background with a 2px black border.\n- **Focus State:** The border color shifts to Electric Cyan or increases in weight to 3px to signal activity.\n\n### Navigation\n- Horizontal layout using `JetBrains Mono`.\n- **Active State:** A 4px Electric Cyan underline or a solid Cyan highlight box behind the link text.\n\n### Chips \u0026 Tags\n- Small rounded rectangles with 1px black borders. Use Primary (Cyan) for high-priority tags and Neutral for secondary metadata.",
+                                                                 "font":  "SPACE_GROTESK",
+                                                                 "headlineFont":  "SPACE_GROTESK",
+                                                                 "headlineFontFamily":  "Space Grotesk",
+                                                                 "labelFont":  "JETBRAINS_MONO",
+                                                                 "labelFontFamily":  "Jetbrains Mono",
+                                                                 "namedColors":  {
+                                                                                     "background":  "#f3fbfb",
+                                                                                     "border-heavy":  "#000000",
+                                                                                     "electric-cyan":  "#00F0FF",
+                                                                                     "error":  "#ba1a1a",
+                                                                                     "error_container":  "#ffdad6",
+                                                                                     "inverse_on_surface":  "#eaf2f3",
+                                                                                     "inverse_primary":  "#00dbe9",
+                                                                                     "inverse_surface":  "#2a3233",
+                                                                                     "on_background":  "#151d1e",
+                                                                                     "on_error":  "#ffffff",
+                                                                                     "on_error_container":  "#93000a",
+                                                                                     "on_primary":  "#ffffff",
+                                                                                     "on_primary_container":  "#006970",
+                                                                                     "on_primary_fixed":  "#002022",
+                                                                                     "on_primary_fixed_variant":  "#004f54",
+                                                                                     "on_secondary":  "#ffffff",
+                                                                                     "on_secondary_container":  "#646464",
+                                                                                     "on_secondary_fixed":  "#1b1b1b",
+                                                                                     "on_secondary_fixed_variant":  "#474747",
+                                                                                     "on_surface":  "#151d1e",
+                                                                                     "on_surface_variant":  "#3b494b",
+                                                                                     "on_tertiary":  "#ffffff",
+                                                                                     "on_tertiary_container":  "#5d5f5f",
+                                                                                     "on_tertiary_fixed":  "#1a1c1c",
+                                                                                     "on_tertiary_fixed_variant":  "#454747",
+                                                                                     "outline":  "#6a7a7b",
+                                                                                     "outline_variant":  "#b9cacb",
+                                                                                     "primary":  "#006970",
+                                                                                     "primary_container":  "#00f0ff",
+                                                                                     "primary_fixed":  "#7df4ff",
+                                                                                     "primary_fixed_dim":  "#00dbe9",
+                                                                                     "secondary":  "#5e5e5e",
+                                                                                     "secondary_container":  "#e2e2e2",
+                                                                                     "secondary_fixed":  "#e2e2e2",
+                                                                                     "secondary_fixed_dim":  "#c6c6c6",
+                                                                                     "surface":  "#f3fbfb",
+                                                                                     "surface-neutral":  "#F4F4F4",
+                                                                                     "surface_bright":  "#f3fbfb",
+                                                                                     "surface_container":  "#e7eff0",
+                                                                                     "surface_container_high":  "#e1eaea",
+                                                                                     "surface_container_highest":  "#dce4e5",
+                                                                                     "surface_container_low":  "#edf5f6",
+                                                                                     "surface_container_lowest":  "#ffffff",
+                                                                                     "surface_dim":  "#d3dcdc",
+                                                                                     "surface_tint":  "#006970",
+                                                                                     "surface_variant":  "#dce4e5",
+                                                                                     "tertiary":  "#5d5f5f",
+                                                                                     "tertiary_container":  "#d9d9d9",
+                                                                                     "tertiary_fixed":  "#e2e2e2",
+                                                                                     "tertiary_fixed_dim":  "#c6c6c7"
+                                                                                 },
+                                                                 "overridePrimaryColor":  "#00f0ff",
+                                                                 "overrideSecondaryColor":  "#000000",
+                                                                 "overrideTertiaryColor":  "#ffffff",
+                                                                 "roundness":  "ROUND_EIGHT",
+                                                                 "spacing":  {
+                                                                                 "container-max":  "1280px",
+                                                                                 "gutter":  "24px",
+                                                                                 "margin-mobile":  "16px",
+                                                                                 "section-gap":  "120px",
+                                                                                 "stack-lg":  "32px",
+                                                                                 "stack-md":  "16px",
+                                                                                 "stack-sm":  "8px"
+                                                                             },
+                                                                 "spacingScale":  2,
+                                                                 "typography":  {
+                                                                                    "body-lg":  {
+                                                                                                    "fontFamily":  "Geist",
+                                                                                                    "fontSize":  "20px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.6"
+                                                                                                },
+                                                                                    "body-md":  {
+                                                                                                    "fontFamily":  "Geist",
+                                                                                                    "fontSize":  "16px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.5"
+                                                                                                },
+                                                                                    "code-sm":  {
+                                                                                                    "fontFamily":  "JetBrains Mono",
+                                                                                                    "fontSize":  "13px",
+                                                                                                    "fontWeight":  "400",
+                                                                                                    "lineHeight":  "1.4"
+                                                                                                },
+                                                                                    "headline-lg":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "48px",
+                                                                                                        "fontWeight":  "700",
+                                                                                                        "lineHeight":  "1.2"
+                                                                                                    },
+                                                                                    "headline-md":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "32px",
+                                                                                                        "fontWeight":  "600",
+                                                                                                        "lineHeight":  "1.3"
+                                                                                                    },
+                                                                                    "headline-xl":  {
+                                                                                                        "fontFamily":  "Space Grotesk",
+                                                                                                        "fontSize":  "72px",
+                                                                                                        "fontWeight":  "700",
+                                                                                                        "letterSpacing":  "-0.03em",
+                                                                                                        "lineHeight":  "1.1"
+                                                                                                    },
+                                                                                    "headline-xl-mobile":  {
+                                                                                                               "fontFamily":  "Space Grotesk",
+                                                                                                               "fontSize":  "48px",
+                                                                                                               "fontWeight":  "700",
+                                                                                                               "letterSpacing":  "-0.02em",
+                                                                                                               "lineHeight":  "1.1"
+                                                                                                           },
+                                                                                    "label-bold":  {
+                                                                                                       "fontFamily":  "JetBrains Mono",
+                                                                                                       "fontSize":  "14px",
+                                                                                                       "fontWeight":  "700",
+                                                                                                       "lineHeight":  "1.2"
+                                                                                                   }
+                                                                                }
+                                                             }
+                                               },
+                              "name":  "assets/9d9950a11a03456380d35efa71e2800f",
+                              "version":  "1"
+                          }
+                      ]
+}

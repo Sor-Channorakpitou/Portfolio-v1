@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About &amp; Contact - DESIGNER.EXE</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Space Grotesk, JetBrains Mono, Geist -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config from Style Guidance -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5",
+                        // Adding missing brutalist colors based on style guidance
+                        "brutal-black": "#000000",
+                        "brutal-yellow": "#00F0FF", // Updated to cyan
+                        "brutal-white": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "brutal": "0px" // Removing border radius for brutalist look
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "section-gap": "120px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "code-sm": ["JetBrains Mono", "monospace"],
+                        "label-bold": ["JetBrains Mono", "monospace"],
+                        "body-lg": ["Geist", "sans-serif"],
+                        "headline-xl-mobile": ["Space Grotesk", "sans-serif"],
+                        "headline-lg": ["Space Grotesk", "sans-serif"],
+                        "headline-xl": ["Space Grotesk", "sans-serif"],
+                        "body-md": ["Geist", "sans-serif"],
+                        "headline-md": ["Space Grotesk", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "code-sm": ["13px", { "lineHeight": "1.4", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-xl-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-xl": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    },
+                    "boxShadow": {
+                        "brutal": "4px 4px 0px 0px rgba(0,0,0,1)",
+                        "brutal-hover": "2px 2px 0px 0px rgba(0,0,0,1)",
+                        "brutal-none": "0px 0px 0px 0px rgba(0,0,0,1)"
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Base styles to enforce font families */
+        body {
+            font-family: 'Geist', sans-serif;
+        }
+        
+        /* Brutalist Button Interactions */
+        .btn-brutal-primary {
+            background-color: theme('colors.brutal-black');
+            color: theme('colors.brutal-yellow');
+            border: 2px solid theme('colors.brutal-black');
+            box-shadow: 4px 4px 0px 0px theme('colors.brutal-black');
+            transition: all 0.1s ease-in-out;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        .btn-brutal-primary:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px theme('colors.brutal-black');
+        }
+
+        .btn-brutal-secondary {
+            background-color: theme('colors.brutal-yellow');
+            color: theme('colors.brutal-black');
+            border: 2px solid theme('colors.brutal-black');
+            box-shadow: 4px 4px 0px 0px theme('colors.brutal-black');
+            transition: all 0.1s ease-in-out;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+        .btn-brutal-secondary:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px theme('colors.brutal-black');
+        }
+
+        /* Brutalist Inputs */
+        .input-brutal {
+            border: 2px solid theme('colors.brutal-black');
+            border-radius: 0;
+            background-color: theme('colors.brutal-white');
+            transition: all 0.1s ease;
+        }
+        .input-brutal:focus {
+            outline: none;
+            border-width: 3px;
+            border-color: theme('colors.brutal-yellow');
+            box-shadow: 4px 4px 0px 0px theme('colors.brutal-black');
+        }
+
+        /* Material Symbols Fill Configuration */
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        
+        /* Hide scrollbar for nav */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col pb-24 md:pb-0 pt-16 font-body-md text-body-md selection:bg-brutal-yellow selection:text-brutal-black">
+<!-- TopAppBar (Web & Mobile Sticky Header) -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b-4 border-on-background flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl" data-weight="fill">terminal</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-on-background">DESIGNER.EXE</span>
+</div>
+<!-- Desktop Navigation (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors p-2 uppercase" href="#">HOME</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors p-2 uppercase" href="#">WORK</a>
+<a class="text-primary font-bold font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors p-2 uppercase border-b-4 border-primary" href="#">ABOUT</a>
+<a class="text-on-surface-variant font-label-bold text-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors p-2 uppercase" href="#contact">CONTACT</a>
+</nav>
+<button class="btn-brutal-primary px-4 py-2 hidden md:block uppercase font-label-bold text-label-bold">
+            HIRE ME
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-8">
+<!-- Hero Section: ABOUT -->
+<section class="w-full bg-electric-cyan border-4 border-brutal-black p-6 md:p-12 mb-section-gap shadow-brutal flex flex-col md:flex-row gap-8 items-center md:items-start">
+<div class="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 border-4 border-brutal-black bg-white overflow-hidden shadow-brutal">
+<img alt="Profile Photo" class="w-full h-full object-cover grayscale contrast-125" data-alt="A striking portrait of a modern UI designer looking confidently at the camera. The setting is a minimalist studio with raw concrete walls and sharp, high-key studio lighting that creates strong contrast. The subject is wearing technical, streetwear-inspired clothing. The color palette is strictly high-contrast black and white with a single, aggressive splash of vibrant yellow light illuminating one side of their face. The mood is intense, professional, and slightly industrial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfkXwaxhEZVFRoKu3IadClLxoZjDj3nJ-dwjqI_AyFs4Dwp9cwDHXlqhC7YMyIFIKeNDkLCmr75XsdJyE7zgVh3s_oQynWUONIsTl5erci3O6MFSHdh19zVhSmXF8510vpoAfx-JEg757HciC6YXmhQVa4YZWYRsqdDoOoOJDdwZfs4AMIGjqvNv91k9mxBqv8ZMCHWCOxlmG-SIUXI6KrZDFuFBAbiIRtvhGyDnAR7-tvKUn_NiWGjQ"/>
+</div>
+<div class="flex flex-col gap-4">
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl-mobile md:font-headline-xl text-brutal-black uppercase">Hello World.</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl font-bold">
+                    I build interfaces that don't apologize. Brutalist foundations, high-utility structure, and micro-interactions that feel like heavy machinery operating flawlessly. If you need soft shadows and pastel gradients, you are in the wrong place.
+                </p>
+<div class="mt-6 flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-white border-2 border-brutal-black text-brutal-black font-label-bold text-label-bold uppercase">UI/UX Design</span>
+<span class="px-4 py-2 bg-surface-container-low border-2 border-brutal-black text-brutal-black font-label-bold text-label-bold uppercase">Frontend Dev</span>
+<span class="px-4 py-2 bg-white border-2 border-brutal-black text-brutal-black font-label-bold text-label-bold uppercase">Design Systems</span>
+<span class="px-4 py-2 bg-surface-container-low border-2 border-brutal-black text-brutal-black font-label-bold text-label-bold uppercase">Tailwind CSS</span>
+<span class="px-4 py-2 bg-brutal-black text-electric-cyan border-2 border-brutal-black font-label-bold text-label-bold uppercase">Brutalism</span>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="w-full mb-section-gap grid grid-cols-1 md:grid-cols-2 gap-12" id="contact">
+<div class="flex flex-col gap-6">
+<h2 class="text-headline-lg font-headline-lg text-brutal-black uppercase tracking-tighter border-b-4 border-brutal-black pb-2 inline-block w-max">INITIATE CONTACT</h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant font-bold">
+                    Have a project that needs structural integrity? Drop a line. No fluff, just specs.
+                </p>
+<div class="flex flex-col gap-4 mt-8 font-label-bold text-label-bold uppercase">
+<a class="flex items-center gap-4 text-on-background hover:text-primary hover:bg-electric-cyan p-3 border-2 border-transparent hover:border-brutal-black transition-all w-max" href="mailto:sys@designer.exe">
+<span class="material-symbols-outlined text-2xl">mail</span>
+                        sys@designer.exe
+                    </a>
+<a class="flex items-center gap-4 text-on-background hover:text-primary hover:bg-electric-cyan p-3 border-2 border-transparent hover:border-brutal-black transition-all w-max" href="#">
+<span class="material-symbols-outlined text-2xl">link</span>
+                        github.com/designer_exe
+                    </a>
+<a class="flex items-center gap-4 text-on-background hover:text-primary hover:bg-electric-cyan p-3 border-2 border-transparent hover:border-brutal-black transition-all w-max" href="#">
+<span class="material-symbols-outlined text-2xl">share</span>
+                        @designer_exe
+                    </a>
+</div>
+</div>
+<!-- The Form -->
+<form class="bg-white border-4 border-brutal-black p-6 md:p-8 shadow-brutal flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-brutal-black uppercase" for="name">Identifier (Name)</label>
+<input class="input-brutal w-full p-4 font-code-sm text-code-sm" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-brutal-black uppercase" for="email">Return Address (Email)</label>
+<input class="input-brutal w-full p-4 font-code-sm text-code-sm" id="email" placeholder="john@domain.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold text-brutal-black uppercase" for="message">Payload (Message)</label>
+<textarea class="input-brutal w-full p-4 font-code-sm text-code-sm resize-none" id="message" placeholder="Enter specifications here..." rows="5"></textarea>
+</div>
+<button class="btn-brutal-secondary w-full py-5 mt-4 text-xl tracking-wider uppercase" type="submit">
+                    SEND TRANSMISSION
+                </button>
+</form>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 bg-surface border-t-4 border-on-background">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-16 hover:bg-secondary-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="text-code-sm font-code-sm text-[10px] uppercase">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-16 hover:bg-secondary-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="grid_view">grid_view</span>
+<span class="text-code-sm font-code-sm text-[10px] uppercase">WORK</span>
+</a>
+<!-- Active State for ABOUT -->
+<a class="flex flex-col items-center justify-center bg-electric-cyan text-brutal-black border-2 border-on-background p-2 scale-110 w-16 -translate-y-2 shadow-brutal transition-all duration-100" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person" data-weight="fill">person</span>
+<span class="text-code-sm font-code-sm font-bold text-[10px] uppercase">ABOUT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-16 hover:bg-secondary-container" href="#contact">
+<span class="material-symbols-outlined mb-1" data-icon="mail">mail</span>
+<span class="text-code-sm font-code-sm text-[10px] uppercase">CONTACT</span>
+</a>
+</nav>
+<script>
+        // Simple script to handle form submission visual state
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'TRANSMITTED';
+            btn.style.backgroundColor = '#000000';
+            btn.style.color = '#00F0FF';
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style.backgroundColor = '';
+                btn.style.color = '';
+                this.reset();
+            }, 2000);
+        });
+    </script>
+</body></html>

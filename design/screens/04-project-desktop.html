@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Driver.js Product Tour - Project Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Geist:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "headline-xl": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .brutal-border {
+            border: 2px solid #151d1e;
+        }
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px #151d1e;
+        }
+        .brutal-hover:hover {
+            box-shadow: 0px 0px 0px 0px #151d1e;
+            transform: translate(4px, 4px);
+        }
+        .brutal-transition {
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation (Shared Component) -->
+<nav class="bg-background dark:bg-on-background w-full sticky top-0 z-50 border-b-4 border-on-background dark:border-primary-fixed shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-label-bold text-headline-md tracking-tighter text-on-background dark:text-background" href="#">DESIGNER.EXE</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-on-background dark:text-primary-fixed border-b-4 border-primary-container pb-1 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all" href="#">WORK</a>
+<a class="font-label-bold text-label-bold text-on-background dark:text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1 active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">ABOUT</a>
+<a class="font-label-bold text-label-bold text-on-background dark:text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1 active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">RESOURCES</a>
+<a class="font-label-bold text-label-bold text-on-background dark:text-surface-variant hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1 active:translate-x-1 active:translate-y-1 active:shadow-none" href="#">LABS</a>
+</div>
+<a class="hidden md:inline-flex items-center justify-center bg-on-background text-primary-fixed font-label-bold text-label-bold px-6 py-3 brutal-border brutal-shadow brutal-hover brutal-transition" href="#">HIRE ME</a>
+</div>
+</nav>
+<!-- Hero Header -->
+<header class="bg-primary-fixed w-full border-b-4 border-on-background pt-section-gap pb-stack-lg px-margin-mobile md:px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row gap-stack-lg items-end justify-between">
+<div class="flex-1">
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-stack-md">Driver.js Product Tour</h1>
+<p class="font-body-lg text-body-lg text-on-background max-w-2xl">A comprehensive redesign of the user onboarding experience utilizing Driver.js, focusing on improving completion rates and user understanding of core features.</p>
+</div>
+<!-- Project Meta Box -->
+<div class="bg-surface-container-lowest p-6 brutal-border brutal-shadow w-full md:w-auto min-w-[300px]">
+<div class="grid grid-cols-2 gap-y-4 gap-x-8">
+<div>
+<p class="font-label-bold text-label-bold text-surface-tint mb-1">ROLE</p>
+<p class="font-body-md text-body-md text-on-background font-medium">Lead UI Engineer</p>
+</div>
+<div>
+<p class="font-label-bold text-label-bold text-surface-tint mb-1">TIMELINE</p>
+<p class="font-body-md text-body-md text-on-background font-medium">4 Weeks</p>
+</div>
+<div class="col-span-2">
+<p class="font-label-bold text-label-bold text-surface-tint mb-1">TECH STACK</p>
+<div class="flex flex-wrap gap-2 mt-1">
+<span class="bg-surface-container px-2 py-1 font-code-sm text-code-sm brutal-border rounded-sm">React</span>
+<span class="bg-surface-container px-2 py-1 font-code-sm text-code-sm brutal-border rounded-sm">Tailwind CSS</span>
+<span class="bg-surface-container px-2 py-1 font-code-sm text-code-sm brutal-border rounded-sm">Driver.js</span>
+</div>
+</div>
+<div class="col-span-2 pt-2 border-t-2 border-on-background mt-2">
+<p class="font-label-bold text-label-bold text-surface-tint mb-1">RESULT</p>
+<p class="font-headline-md text-headline-md text-on-background">+42% Onboarding Completion</p>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap flex flex-col gap-section-gap">
+<!-- Context & Solution (High Contrast) -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest p-stack-lg brutal-border brutal-shadow">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md flex items-center gap-3">
+<span class="material-symbols-outlined text-[40px] bg-error-container text-on-error-container p-2 brutal-border">warning</span>
+                    The Challenge
+                </h2>
+<p class="font-body-lg text-body-lg text-on-background mb-4">Users were abandoning the platform within the first 5 minutes of signup. The previous onboarding flow consisted of a dense, multi-page modal that overwhelmed new users with technical jargon and required reading.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Analytics showed a 78% drop-off rate on step 2 of the old flow, indicating a critical need for an interactive, context-aware approach to learning the UI.</p>
+</div>
+<div class="bg-inverse-surface text-inverse-on-surface p-stack-lg brutal-border brutal-shadow shadow-primary-container">
+<h2 class="font-headline-lg text-headline-lg mb-stack-md flex items-center gap-3 text-primary-fixed">
+<span class="material-symbols-outlined text-[40px] bg-primary-fixed text-on-primary-fixed p-2 brutal-border">lightbulb</span>
+                    The Solution
+                </h2>
+<p class="font-body-lg text-body-lg mb-4 text-surface-bright">Implementing a contextual, step-by-step tour using Driver.js. Instead of telling users what to do, we guided them to perform core actions directly within the actual application interface.</p>
+<ul class="space-y-4 font-body-md text-body-md text-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed mt-1">check_box</span>
+<span>Interactive highlighting of actual DOM elements.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed mt-1">check_box</span>
+<span>Bite-sized, action-oriented tooltip copy.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary-fixed mt-1">check_box</span>
+<span>Progress persistence allowing users to pause and resume.</span>
+</li>
+</ul>
+</div>
+</section>
+<!-- Visual Execution Gallery -->
+<section>
+<div class="flex items-end justify-between mb-stack-lg border-b-4 border-on-background pb-4">
+<h2 class="font-headline-lg text-headline-lg">Visual Execution</h2>
+<p class="font-label-bold text-label-bold text-surface-tint hidden md:block">03 ARTIFACTS</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Screen adaptation -->
+<div class="md:col-span-12 bg-surface-container-lowest brutal-border p-4 brutal-shadow group overflow-hidden">
+<div class="relative w-full aspect-[16/9] bg-surface-container border-2 border-on-background overflow-hidden">
+<!-- Adapted Screen 5 for desktop -->
+<div class="absolute inset-0 w-full h-full object-cover">
+<div class="bg-cover bg-center w-full h-full" data-alt="A high-fidelity desktop UI mockup of a SaaS dashboard being highlighted by a product tour tooltip. The tooltip is vibrant yellow with stark black borders and bold typography, contrasting sharply against a slightly dimmed, sophisticated dashboard interface in light mode. The style is modern brutalist, clean, and highly technical." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdFaklh7kp_ceuCXR-0z_g8FAzq9Oli5zJydAQPqniSNY06_C052JoUugxoJwQfJMKRoIsjCJX3NvgG0aRWKYW_sU6DnEqQWhjptExE56ULT10j_GKay5vfcM09NF2MTWjHysjzuzZbBSr8Fnw0cXnuTs5bGTLzYXQHcNg55OiQ1YE39hwXpOsy2fl2ZZHCLk0UP-WLChae25IY24OKvkG_gZy0gxDRuuNu1DlzX5BPSciRnjR8ta70Q')"></div>
+</div>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md">Initial Tour Step</h3>
+<span class="font-label-bold text-label-bold bg-primary-container px-3 py-1 brutal-border">01</span>
+</div>
+<p class="font-body-md text-body-md mt-2 text-on-surface-variant max-w-3xl">The entry point highlights the primary navigation, establishing the mental model for the application's structure.</p>
+</div>
+<div class="md:col-span-6 bg-surface-container-lowest brutal-border p-4 brutal-shadow">
+<div class="relative w-full aspect-[4/3] bg-surface-container border-2 border-on-background overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="A detailed UI component close-up of a popover tooltip used in a web application. The tooltip features a brutalist design with a 2px solid black border, a bright yellow background, and heavy, sans-serif typography. It points to a distinct 'Create Project' button. The lighting is flat and uniform, typical of high-end UI design systems." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKht5ZpuUdZX5A6Y0IShB-bT08A3yuSNkCjfXS1KBY1O4W5S3n9li9EGgibbFBBRYL7PpbCVN4SokBhElTT0pHSdfKvPTljQFY3TU7zjv-N4xgDXqlEVj9mnYlLHrx2j2NOI33PObIrhdCyI0Nge1stAx_c9zNSOiRG5KmFHfZtxQRQrrMXnRg3bD2bC9saW-ijmKKZOK6nW2cCvRYsGjGIktiC9Wu0RMpbtPSXYs01A_xW5mMH6tX4w"/>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<h3 class="font-headline-md text-[24px] font-semibold">Tooltip Component</h3>
+<span class="font-label-bold text-label-bold bg-surface-container px-3 py-1 brutal-border">02</span>
+</div>
+</div>
+<div class="md:col-span-6 bg-surface-container-lowest brutal-border p-4 brutal-shadow">
+<div class="relative w-full aspect-[4/3] bg-surface-container border-2 border-on-background overflow-hidden">
+<img class="object-cover w-full h-full" data-alt="A data visualization chart showing user retention metrics before and after an onboarding redesign. The chart uses a stark brutalist style with thick black lines, a white background, and vibrant yellow fill areas to indicate growth. The typography is monospaced and technical. High contrast, clean, and impactful." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0EPWjF9iznTazgYAnhSvhAbNBZR1GwcxjcduHNgHxfQb8KKSphbD3ddnSHsHCAB9czO-4182WIYwWP9wW5v5AhjrCorTXO5-Dcr_b00llqNbcPQJr5219uruMinGnLcEMPR1eLQnn3ru5hQTj_XOj3qgt6xgBv-7Q75pu3mSXR3n0kPHNnk6AaE3_-GMBOP1LBx3UK-4xVmtf5qNasLgljomK4JHFghcLxxOt3BfRBymN-2MfqAq8tA"/>
+</div>
+<div class="mt-4 flex justify-between items-center">
+<h3 class="font-headline-md text-[24px] font-semibold">Impact Analytics</h3>
+<span class="font-label-bold text-label-bold bg-surface-container px-3 py-1 brutal-border">03</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Project Nav -->
+<section class="mt-section-gap flex justify-center">
+<a class="group block w-full max-w-4xl bg-primary-fixed brutal-border brutal-shadow brutal-hover brutal-transition p-stack-lg text-center relative overflow-hidden" href="#">
+<span class="font-label-bold text-label-bold text-on-primary-fixed mb-4 block tracking-widest">NEXT PROJECT</span>
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background group-hover:scale-105 transition-transform duration-300">Stripe Checkout Audit</h2>
+<div class="absolute right-stack-lg top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 group-hover:translate-x-4 transition-all duration-300 hidden md:block">
+<span class="material-symbols-outlined text-[64px]">arrow_forward</span>
+</div>
+</a>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-on-background dark:bg-surface-container-lowest w-full mt-section-gap border-t-4 border-on-background">
+<div class="flex flex-col md:flex-row justify-between items-center p-stack-lg gap-stack-md max-w-container-max mx-auto">
+<p class="font-label-bold text-body-md text-primary-fixed">©2024 DESIGNER.EXE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-6">
+<a class="font-label-bold text-label-bold uppercase text-primary-fixed dark:text-primary underline text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">GITHUB</a>
+<a class="font-label-bold text-label-bold uppercase text-primary-fixed dark:text-primary text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">LINKEDIN</a>
+<a class="font-label-bold text-label-bold uppercase text-primary-fixed dark:text-primary text-surface-variant hover:text-primary-fixed-dim transition-opacity transition-transform hover:scale-105" href="#">READCV</a>
+</div>
+</div>
+</footer>
+</body></html>

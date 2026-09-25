@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CRAFTING HIGH-VOLTAGE DIGITAL EXPERIENCES</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Geist:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "headline-xl": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col antialiased">
+<!-- Top Navigation -->
+<nav class="bg-background text-primary font-headline-md text-headline-md w-full sticky top-0 z-50 border-b-4 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<a class="font-label-bold text-headline-md tracking-tighter text-on-background" href="#">DESIGNER.EXE</a>
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="font-label-bold text-label-bold text-on-background border-b-4 border-primary-container" href="#">WORK</a>
+<a class="font-label-bold text-label-bold text-on-background hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">ABOUT</a>
+<a class="font-label-bold text-label-bold text-on-background hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">RESOURCES</a>
+<a class="font-label-bold text-label-bold text-on-background hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">LABS</a>
+</div>
+<button class="hidden md:block bg-on-background text-primary-fixed border-2 border-on-background px-6 py-2 font-label-bold text-label-bold shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">HIRE ME</button>
+<button class="md:hidden text-on-background">
+<span class="material-symbols-outlined" style="font-size: 32px;">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="bg-primary-container w-full border-b-4 border-on-background overflow-hidden relative">
+<!-- Abstract geometric background shapes -->
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="black" stroke-width="2"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-container-max mx-auto px-gutter py-section-gap flex flex-col md:flex-row items-center justify-between gap-stack-lg relative z-10">
+<div class="flex-1 max-w-3xl">
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-stack-lg uppercase leading-none border-b-4 border-on-background pb-stack-sm inline-block">
+                    CRAFTING<br/>HIGH-VOLTAGE<br/>DIGITAL EXPERIENCES.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-background mb-stack-lg max-w-xl bg-surface-container-lowest border-2 border-on-background p-stack-md shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                    Building robust, performant interfaces with raw structure. No fluff, just uncompromised performance and striking visual hierarchy.
+                </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-on-background text-primary-fixed border-2 border-on-background px-8 py-4 font-label-bold text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center gap-2">
+                        View Work <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest text-on-background border-2 border-on-background px-8 py-4 font-label-bold text-label-bold uppercase shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                        About Me
+                    </button>
+</div>
+</div>
+<div class="hidden md:block flex-1 relative w-full h-[500px]">
+<div class="absolute right-0 top-0 w-[400px] h-[400px] bg-on-background border-4 border-on-background shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] flex items-center justify-center overflow-hidden rotate-3 hover:rotate-0 transition-transform duration-300">
+<img class="object-cover w-full h-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" data-alt="Abstract brutalist 3D render featuring monolithic geometric shapes in pure black and vibrant yellow. High contrast, sharp edges, studio lighting creating deep solid shadows. Developer tech aesthetic, industrial feel, raw structural design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1wz5EBLoUKkEngNsUhPuCxB4_KPxYvEhrupbDYaiul3pPTRFTh675JHI4_J98Oxmbt1-vkSCiDkqwe4e0tGl3xyDnXRIMlSCwS0PyONX40-X8qooV4yrKl_JAamo6mnGN1_G8mQFlkwOIUIKWIreIYLtqZfcw0PAjT5eNTkXpugB2NZrdDuymydFq__Br51ZGzlBSx_eq0WqLz-6nIkTHfBZwvA9XgzVjK52ffmxqTP-FqMiSGXmnTA"/>
+</div>
+<div class="absolute right-[300px] bottom-[50px] bg-surface-container-lowest border-2 border-on-background p-stack-sm shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-6 z-20">
+<span class="font-label-bold text-label-bold uppercase text-on-background">System Ready // 100%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Banner -->
+<div class="bg-on-background text-primary-fixed py-stack-sm border-b-4 border-on-background overflow-hidden relative flex whitespace-nowrap">
+<div class="animate-marquee inline-block font-label-bold text-label-bold uppercase tracking-widest">
+            AVAILABLE FOR FREELANCE // REACT // VUE // TAILWIND // TYPESCRIPT // WEBGL // THREE.JS // UI/UX DESIGN // BRUTALISM // AVAILABLE FOR FREELANCE // REACT // VUE // TAILWIND // TYPESCRIPT // WEBGL // THREE.JS // UI/UX DESIGN // BRUTALISM //
+        </div>
+<div class="animate-marquee inline-block font-label-bold text-label-bold uppercase tracking-widest absolute top-stack-sm">
+            AVAILABLE FOR FREELANCE // REACT // VUE // TAILWIND // TYPESCRIPT // WEBGL // THREE.JS // UI/UX DESIGN // BRUTALISM // AVAILABLE FOR FREELANCE // REACT // VUE // TAILWIND // TYPESCRIPT // WEBGL // THREE.JS // UI/UX DESIGN // BRUTALISM //
+        </div>
+</div>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+    </style>
+<!-- Featured Projects -->
+<section class="max-w-container-max mx-auto px-gutter py-section-gap w-full flex-grow">
+<div class="flex justify-between items-end border-b-4 border-on-background pb-stack-md mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase m-0">Selected Work</h2>
+<a class="font-label-bold text-label-bold text-on-background uppercase hover:bg-primary-container px-2 py-1 transition-colors flex items-center gap-1 border-2 border-transparent hover:border-on-background" href="#">
+                All Projects <span class="material-symbols-outlined text-sm">arrow_outward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<article class="bg-surface-container-lowest border-2 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group flex flex-col h-full">
+<div class="h-64 border-b-2 border-on-background overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="Screenshot of a complex financial dashboard interface. High contrast minimalist design, black and white with neon yellow accents. Data visualization, charts, and dense typography grids. Brutalist web design aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiyQk5ZBsU4ahg_0eIQqH11g4PBIHQ9rp7HbM9x1hTMIA3gE5Tu-Lu3EREiWjyv27m80z-Zi_f3Ty0L-eHZ1eO2Z6EU0HDtbVLqeSJpjRBslyKDHuvyyTHXRMzfSPiaz47SGPrSgsq4RJ8dgMt-RlmCdTShKqiwLnXn5kA7hv-cpOESctJMt8y_FN7TcnJBkmT7CAQ_-U0YCft01evkHWjCxQYmSJHbmFPSY18U_Rfn5HlqS4VjUqITA"/>
+<div class="absolute top-stack-sm right-stack-sm flex gap-stack-sm">
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-2 py-1 font-code-sm text-code-sm uppercase">2024</span>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm uppercase leading-tight">FinTech Data Protocol</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">A high-density trading dashboard engineered for millisecond latency and absolute data clarity.</p>
+<div class="flex flex-wrap gap-stack-sm mt-auto">
+<span class="bg-surface-container text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">React</span>
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">D3.js</span>
+</div>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="bg-surface-container-lowest border-2 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group flex flex-col h-full">
+<div class="h-64 border-b-2 border-on-background overflow-hidden relative">
+<div class="w-full h-full bg-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[100px] text-on-background group-hover:scale-110 transition-transform">code_blocks</span>
+</div>
+<div class="absolute top-stack-sm right-stack-sm flex gap-stack-sm">
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-2 py-1 font-code-sm text-code-sm uppercase">2023</span>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm uppercase leading-tight">Terminal OS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">A web-based operating system simulation built entirely with CSS grid and raw vanilla JavaScript.</p>
+<div class="flex flex-wrap gap-stack-sm mt-auto">
+<span class="bg-surface-container text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">Vanilla JS</span>
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">CSS</span>
+</div>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="bg-surface-container-lowest border-2 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group flex flex-col h-full">
+<div class="h-64 border-b-2 border-on-background overflow-hidden relative bg-on-background">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity mix-blend-luminosity group-hover:mix-blend-normal" data-alt="E-commerce fashion website mockup in a brutalist style. Large typography, harsh grids, heavy black borders on a pure white background. Editorial high-fashion photography integrated into raw web components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgemXcaQ462o2cxlSrFrmxk0XUPbcDaQqKDeYtFe924VY8Du9lW0WMEonD-zkQ0wRdHeaO4KRGbnVykq7iZPQdIfoL5Qu5mME8XIONr2YbB8GAgobOJQHYZ4HL8ToZUnLHcEm5H2x1z5Z3GOHd37kheMmISJvkcyK4bn9TaX4Albpj3gSeS_Ks3JT57hXe2USZm5RoWQ0NUe6mwt_-QRx9pNckFWSRoUPBKQvsnz2Rf2_lGuI7gf6ngQ"/>
+<div class="absolute top-stack-sm right-stack-sm flex gap-stack-sm">
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-2 py-1 font-code-sm text-code-sm uppercase">2023</span>
+</div>
+</div>
+<div class="p-stack-lg flex flex-col flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm uppercase leading-tight">Anti-Commerce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">An experimental storefront defying conventional UX patterns to create memorable friction.</p>
+<div class="flex flex-wrap gap-stack-sm mt-auto">
+<span class="bg-surface-container text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">Next.js</span>
+<span class="bg-surface-container-lowest text-on-background border border-on-background px-3 py-1 font-label-bold text-label-bold">Stripe API</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-on-background text-primary-fixed font-label-bold text-label-bold uppercase w-full mt-section-gap border-t-4 border-on-background">
+<div class="flex flex-col md:flex-row justify-between items-center p-stack-lg gap-stack-md max-w-container-max mx-auto">
+<div class="font-label-bold text-body-md text-primary-fixed">
+                ©2024 DESIGNER.EXE. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-stack-md">
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity hover:scale-105 inline-block" href="#">GITHUB</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity hover:scale-105 inline-block" href="#">LINKEDIN</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-opacity hover:scale-105 inline-block" href="#">READCV</a>
+</div>
+</div>
+</footer>
+</body></html>

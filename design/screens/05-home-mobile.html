@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DESIGNER.EXE - Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600&amp;family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container": "#e7eff0",
+                      "on-primary-container": "#006970",
+                      "secondary-fixed-dim": "#c6c6c6",
+                      "error": "#ba1a1a",
+                      "background": "#f3fbfb",
+                      "on-primary": "#ffffff",
+                      "secondary": "#5e5e5e",
+                      "outline-variant": "#b9cacb",
+                      "primary-fixed": "#7df4ff",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "surface-tint": "#006970",
+                      "secondary-container": "#e2e2e2",
+                      "outline": "#6a7a7b",
+                      "tertiary": "#5d5f5f",
+                      "border-heavy": "#000000",
+                      "on-secondary-fixed-variant": "#474747",
+                      "tertiary-container": "#d9d9d9",
+                      "on-secondary-fixed": "#1b1b1b",
+                      "inverse-on-surface": "#eaf2f3",
+                      "surface-container-lowest": "#ffffff",
+                      "on-background": "#151d1e",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-surface-variant": "#3b494b",
+                      "electric-cyan": "#00F0FF",
+                      "surface-container-low": "#edf5f6",
+                      "surface-dim": "#d3dcdc",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#5d5f5f",
+                      "on-primary-fixed": "#002022",
+                      "on-secondary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#2a3233",
+                      "primary-container": "#00f0ff",
+                      "surface-container-high": "#e1eaea",
+                      "primary": "#006970",
+                      "on-secondary-container": "#646464",
+                      "on-surface": "#151d1e",
+                      "surface-bright": "#f3fbfb",
+                      "secondary-fixed": "#e2e2e2",
+                      "on-tertiary": "#ffffff",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-variant": "#dce4e5",
+                      "error-container": "#ffdad6",
+                      "surface-neutral": "#F4F4F4",
+                      "on-primary-fixed-variant": "#004f54",
+                      "inverse-primary": "#00dbe9",
+                      "primary-fixed-dim": "#00dbe9",
+                      "surface": "#f3fbfb",
+                      "surface-container-highest": "#dce4e5"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "margin-mobile": "16px",
+                      "stack-md": "16px",
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "stack-sm": "8px"
+              },
+              "fontFamily": {
+                      "code-sm": [
+                              "JetBrains Mono"
+                      ],
+                      "label-bold": [
+                              "JetBrains Mono"
+                      ],
+                      "body-lg": [
+                              "Geist"
+                      ],
+                      "headline-xl-mobile": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "body-md": [
+                              "Geist"
+                      ],
+                      "headline-md": [
+                              "Space Grotesk"
+                      ]
+              },
+              "fontSize": {
+                      "code-sm": [
+                              "13px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-bold": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-xl-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.03em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .brutal-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(21,29,30,1);
+        }
+        .brutal-shadow-hover:hover {
+            box-shadow: 0px 0px 0px 0px rgba(21,29,30,1);
+            transform: translate(4px, 4px);
+        }
+        .brutal-border {
+            border: 2px solid #151d1e;
+        }
+        .brutal-border-heavy {
+            border: 4px solid #151d1e;
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background text-primary dark:text-primary-fixed docked full-width top-0 border-b-4 border-on-background flex justify-between items-center w-full px-margin-mobile h-16 z-50 sticky">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-3xl font-bold text-on-background">terminal</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-on-background dark:text-surface">DESIGNER.EXE</span>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-background font-bold text-label-bold font-label-bold underline decoration-4 underline-offset-4 decoration-primary-container" href="#">HOME</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">WORK</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">ABOUT</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-2 py-1" href="#">CONTACT</a>
+</nav>
+<button class="hidden md:flex items-center gap-2 bg-on-background text-primary-container brutal-border px-4 py-2 text-label-bold font-label-bold brutal-shadow brutal-shadow-hover transition-all">
+            HIRE ME
+        </button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="bg-primary-container w-full min-h-[618px] flex flex-col justify-center px-margin-mobile md:px-gutter brutal-border-heavy border-t-0 border-l-0 border-r-0">
+<div class="max-w-container-max mx-auto w-full py-20">
+<h1 class="text-headline-xl-mobile font-headline-xl-mobile md:text-headline-xl md:font-headline-xl text-on-background max-w-4xl tracking-tighter uppercase mb-6">
+                    Crafting high-voltage digital experiences.
+                </h1>
+<p class="text-body-lg font-body-lg text-on-background mb-10 max-w-2xl border-l-4 border-on-background pl-4 bg-white/50 py-2">
+                    I build interfaces that demand attention. Raw structure, bold typography, and uncompromised performance.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-on-background text-primary-container brutal-border px-8 py-4 text-label-bold font-label-bold brutal-shadow brutal-shadow-hover transition-all w-full sm:w-auto text-center">
+                        View Work
+                    </button>
+<button class="bg-surface text-on-background brutal-border px-8 py-4 text-label-bold font-label-bold brutal-shadow brutal-shadow-hover transition-all w-full sm:w-auto text-center">
+                        About Me
+                    </button>
+</div>
+</div>
+</section>
+<!-- Marquee / Ticker -->
+<div class="bg-on-background text-primary-container py-3 border-b-4 border-on-background overflow-hidden flex whitespace-nowrap">
+<div class="animate-[marquee_20s_linear_infinite] flex items-center text-label-bold font-label-bold gap-8 px-4">
+<span>UI/UX DESIGN</span> • <span>FRONTEND DEVELOPMENT</span> • <span>DESIGN SYSTEMS</span> • <span>PROTOTYPING</span> • 
+                <span>UI/UX DESIGN</span> • <span>FRONTEND DEVELOPMENT</span> • <span>DESIGN SYSTEMS</span> • <span>PROTOTYPING</span> •
+                <span>UI/UX DESIGN</span> • <span>FRONTEND DEVELOPMENT</span> • <span>DESIGN SYSTEMS</span> • <span>PROTOTYPING</span>
+</div>
+</div>
+<!-- Featured Projects -->
+<section class="py-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<h2 class="text-headline-lg font-headline-lg mb-12 border-b-4 border-on-background pb-4 inline-block uppercase tracking-tight">Featured Projects</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<article class="bg-surface brutal-border brutal-shadow brutal-shadow-hover transition-all flex flex-col group cursor-pointer">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A striking digital interface design featuring a bold, high-contrast dashboard with brutalist geometric elements, harsh shadows, and a vibrant primary color palette of cyan, black, and white. The layout is structured and grid-heavy, displaying complex data visualizations in a raw, utilitarian aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC77h6r_8cgvnGXsPszaVMT1xRNjl3wO0yGvuP2OjU0F8kYTX3HapqZXE2Ryw00_DAXpmpiEAX56yVr8dGbFeuksHDx7JrfsRoGJ_XXIaFVGFw_Nv14vnYyJiwoNhJmbQgH7KXTZn6ZZw2ZlXlZDVnaVzLIDAYXejAQAGMu1rv64aHYCeys95puMZULYy7xF6zRQ_YU-DZJ2fVHzPdj3-kwb19XRtSXmUjSti4_3UgG3kCbqfGoZY-BVw"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-low px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">Fintech</span>
+<span class="bg-primary-container px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">System</span>
+</div>
+<h3 class="text-headline-md font-headline-md mb-2">Neon Ledger</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">A high-performance trading interface built with ruthless efficiency and brutalist aesthetics.</p>
+</div>
+<div class="flex justify-between items-center border-t-2 border-on-background pt-4 mt-auto">
+<span class="text-label-bold font-label-bold">View Case Study</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Project 2 -->
+<article class="bg-surface brutal-border brutal-shadow brutal-shadow-hover transition-all flex flex-col group cursor-pointer">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="An edgy, modern e-commerce product page design displaying a brutalist clothing line. The interface uses heavy black borders, stark white backgrounds, and large, unpolished typography. The visual hierarchy is aggressive, with oversized 'Buy Now' buttons featuring hard drop shadows and a utilitarian layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9AQ8sPrQjKOYdj1JBKq_hsCmhW4njb7TRbJqVUV8pkvNwRbzDPSJUMxxqX6YNH7rb2FwvNqnWd-DZ9a8n7C7AhWqraE5G6JESwu6FqtXBlZxWWYTV7xVs4vabg-nvUwg0oEPLirxquzq-o1wYYsUbPf-LxpjqY5NcXcmPlP9a_5M6xbCWWFx1_kRuOgq7xtCjbPj7Q0HUrc0OsDy7iwu_m18-6nX1biLMFYsecqdILp9d6d3d0m06Cw"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-low px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">E-Commerce</span>
+<span class="bg-primary-container px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">Web</span>
+</div>
+<h3 class="text-headline-md font-headline-md mb-2">Raw Supply</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Direct-to-consumer storefront utilizing aggressive typography and modular grid systems.</p>
+</div>
+<div class="flex justify-between items-center border-t-2 border-on-background pt-4 mt-auto">
+<span class="text-label-bold font-label-bold">View Case Study</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+<!-- Project 3 -->
+<article class="bg-surface brutal-border brutal-shadow brutal-shadow-hover transition-all flex flex-col group cursor-pointer md:col-span-2 lg:col-span-1">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300" data-alt="A dark-mode developer documentation site with a technical, high-contrast aesthetic. It features mono-spaced typography, syntax-highlighted code blocks in stark white and cyan against deep blacks, and heavy structural borders separating navigation elements from the main content canvas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAekJFLFSzf9AG_CGq-LN9p6N5UXW0wQfiX2Ntpfb1izYd8gxwzhLb2eMkRAq8AuL9SjLmD39SquDXjW0gpdGBOs-t5C3hTm0OXDnf4RwOmtDU2RHC9qbPqjxjYlYVIPfCSdC506srZ6VecQZ9U9kajSJeANGXIMbHA-vrUBV3I7KO4x00IWdG8cSusbpY97ve-kMwwOvRLva4ngvW5UroouBzJ60wu6_k9EgzuSOSh1BeyDaUVU5xeiA"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-low px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">Docs</span>
+<span class="bg-primary-container px-2 py-1 text-code-sm font-code-sm brutal-border border-[1px]">Tooling</span>
+</div>
+<h3 class="text-headline-md font-headline-md mb-2">Archiver API</h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">Developer documentation designed for extreme readability and rapid scanning.</p>
+</div>
+<div class="flex justify-between items-center border-t-2 border-on-background pt-4 mt-auto">
+<span class="text-label-bold font-label-bold">View Case Study</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</div>
+</div>
+</article>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 bg-surface border-t-4 border-on-background">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-background border-2 border-on-background p-1 scale-110 active:scale-95 transition-all duration-100" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-label-bold font-label-bold text-[10px]">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-secondary-container active:scale-95 transition-all duration-100" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-label-bold font-label-bold text-[10px]">WORK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-secondary-container active:scale-95 transition-all duration-100" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-bold font-label-bold text-[10px]">ABOUT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-1 hover:bg-secondary-container active:scale-95 transition-all duration-100" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-bold font-label-bold text-[10px]">CONTACT</span>
+</a>
+</nav>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</body></html>

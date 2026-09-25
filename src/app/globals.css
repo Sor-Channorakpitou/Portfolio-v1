@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme {
+  /* ===== Electric Brutalist palette ===== */
+  --color-background: #e8f0f0;
+  --color-on-background: #151d1e;
+  --color-surface: #e8f0f0;
+  --color-surface-container: #e2ebec;
+  --color-surface-container-low: #e8f0f1;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-high: #dce6e7;
+  --color-surface-container-highest: #d6e1e2;
+  --color-surface-variant: #d6e1e2;
+  --color-surface-dim: #d0dadb;
+  --color-surface-neutral: #f4f4f4;
+  --color-surface-bright: #f3fbfb;
+  --color-on-surface: #151d1e;
+  --color-on-surface-variant: #374446;
+  --color-primary: #006970;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #00f0ff;
+  --color-on-primary-container: #006970;
+  --color-primary-fixed: #7df4ff;
+  --color-primary-fixed-dim: #00dbe9;
+  --color-on-primary-fixed: #002022;
+  --color-on-primary-fixed-variant: #004f54;
+  --color-inverse-primary: #00dbe9;
+  --color-inverse-surface: #2a3233;
+  --color-inverse-on-surface: #eaf2f3;
+  --color-electric-cyan: #00f0ff;
+  --color-border-heavy: #000000;
+  --color-badge-shadow: #ffffff;
+  --color-secondary-fixed: #e2e2e2;
+  --color-secondary-fixed-dim: #c6c6c6;
+  --color-outline: #5f7071;
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  /* ===== Typography ===== */
+  --font-headline: var(--font-space-grotesk);
+  --font-body: var(--font-geist);
+  --font-mono: var(--font-jetbrains-mono);
+
+  --text-headline-xl: 72px;
+  --text-headline-xl--line-height: 1.1;
+  --text-headline-xl--letter-spacing: -0.03em;
+  --text-headline-xl--font-weight: 700;
+
+  --text-headline-xl-mobile: 48px;
+  --text-headline-xl-mobile--line-height: 1.1;
+  --text-headline-xl-mobile--letter-spacing: -0.02em;
+  --text-headline-xl-mobile--font-weight: 700;
+
+  --text-headline-lg: 48px;
+  --text-headline-lg--line-height: 1.2;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 32px;
+  --text-headline-md--line-height: 1.3;
+  --text-headline-md--font-weight: 600;
+
+  --text-body-lg: 20px;
+  --text-body-lg--line-height: 1.6;
+  --text-body-lg--font-weight: 400;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 1.5;
+  --text-body-md--font-weight: 400;
+
+  --text-label-bold: 14px;
+  --text-label-bold--line-height: 1.2;
+  --text-label-bold--font-weight: 700;
+
+  --text-code-sm: 13px;
+  --text-code-sm--line-height: 1.4;
+  --text-code-sm--font-weight: 400;
+
+  /* ===== Spacing ===== */
+  --spacing-gutter: 24px;
+  --spacing-stack-sm: 8px;
+  --spacing-stack-md: 16px;
+  --spacing-stack-lg: 32px;
+  --spacing-section-gap: 120px;
+  --spacing-margin-mobile: 16px;
+
+  /* ===== Layout ===== */
+  --container-page: 1280px;
+
+  /* ===== Elevation: hard-offset shadows, no blur ===== */
+  --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+
+  /* ===== Motion ===== */
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+
+  /* ===== Electric Brutalist — dark palette (cyan → signal yellow) ===== */
+  --color-background: #101718;
+  --color-on-background: #eaf2f3;
+  --color-surface: #101718;
+  --color-surface-container: #1d2627;
+  --color-surface-container-low: #182122;
+  --color-surface-container-lowest: #0b1213;
+  --color-surface-container-high: #222c2d;
+  --color-surface-container-highest: #2d3738;
+  --color-surface-variant: #3b494b;
+  --color-surface-dim: #141d1e;
+  --color-surface-neutral: #141414;
+  --color-surface-bright: #374041;
+  --color-on-surface: #eaf2f3;
+  --color-on-surface-variant: #b9cacb;
+  --color-primary: #f1c40f;
+  --color-on-primary: #00363a;
+  --color-primary-container: #f1c40f;
+  --color-on-primary-container: #524700;
+  --color-primary-fixed: #f1c40f;
+  --color-primary-fixed-dim: #f1c40f;
+  --color-on-primary-fixed: #211b00;
+  --color-on-primary-fixed-variant: #524700;
+  --color-inverse-primary: #f1c40f;
+  --color-inverse-surface: #e7eff0;
+  --color-inverse-on-surface: #2a3233;
+  --color-electric-cyan: #f1c40f;
+  --color-border-heavy: #000000;
+  --color-badge-shadow: #000000;
+  --color-secondary-fixed: #1b1b1b;
+  --color-secondary-fixed-dim: #474747;
+  --color-outline: #b9cacb;
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+
+  /* Hard-offset shadows read stronger on dark — keep them black */
+  --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 0.9);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-on-background font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-primary-container text-on-primary-container;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+    line-height: 1;
+  }
+
+  .material-symbols-filled {
+    font-variation-settings:
+      "FILL" 1,
+      "wght" 400,
+      "GRAD" 0,
+      "opsz" 24;
+  }
+}
+
+@layer utilities {
+  .brutal-shadow-hover {
+    transition: all 0.2s ease-in-out;
+  }
+  .brutal-shadow-hover:hover {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    transform: translate(4px, 4px);
+  }
+  .brutal-press:active {
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 1);
+    transform: translate(4px, 4px);
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

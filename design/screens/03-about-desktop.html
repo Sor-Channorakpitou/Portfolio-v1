@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About &amp; Contact - DESIGNER.EXE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "headline-xl": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        body {
+            background-color: #f3fbfb;
+            color: #151d1e;
+        }
+        
+        .brutalist-border {
+            border: 4px solid #000000;
+        }
+        
+        .brutalist-shadow {
+            box-shadow: 8px 8px 0px 0px #000000;
+        }
+
+        .brutalist-input-shadow:focus {
+            box-shadow: 4px 4px 0px 0px #000000;
+            outline: none;
+        }
+        
+        .brutalist-btn:active {
+            transform: translate(8px, 8px);
+            box-shadow: 0px 0px 0px 0px #000000;
+        }
+
+        .brutalist-input {
+            border: 4px solid #000000;
+            background-color: #ffffff;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .brutalist-input:focus {
+            border-color: #00F0FF;
+            outline: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-lg">
+<!-- TopNavBar -->
+<nav class="w-full sticky top-0 z-50 bg-background dark:bg-on-background border-b-4 border-on-background dark:border-electric-cyan shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-label-bold text-headline-md tracking-tighter text-on-background dark:text-background uppercase">
+                DESIGNER.EXE
+            </div>
+<div class="hidden md:flex gap-8 items-center font-label-bold text-label-bold uppercase">
+<a class="text-on-background dark:text-surface-variant hover:bg-electric-cyan hover:text-black transition-colors py-2 px-4 border-4 border-transparent" href="#">WORK</a>
+<a class="text-on-background dark:text-electric-cyan border-b-4 border-electric-cyan py-2 px-4 hover:bg-electric-cyan hover:text-black transition-colors" href="#">ABOUT</a>
+<a class="text-on-background dark:text-surface-variant hover:bg-electric-cyan hover:text-black transition-colors py-2 px-4 border-4 border-transparent" href="#">RESOURCES</a>
+<a class="text-on-background dark:text-surface-variant hover:bg-electric-cyan hover:text-black transition-colors py-2 px-4 border-4 border-transparent" href="#">LABS</a>
+</div>
+<button class="bg-on-background text-electric-cyan dark:bg-electric-cyan dark:text-on-background font-label-bold text-label-bold px-6 py-3 uppercase brutalist-border brutalist-shadow brutalist-btn transition-all">
+                HIRE ME
+            </button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-start">
+<!-- Left Side: Bio & Skills -->
+<div class="flex flex-col gap-stack-lg">
+<div>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-stack-md uppercase tracking-tighter">
+                        HELLO WORLD
+                    </h1>
+<div class="h-2 w-32 bg-electric-cyan brutalist-border mb-stack-md"></div>
+<p class="font-body-lg text-body-lg text-on-surface">
+                        I am a digital architect operating at the intersection of high-fidelity aesthetics and robust engineering. My mission is to construct interfaces that don't just function, but dominate the screen. I thrive on pure contrast, stark structures, and uncompromising performance.
+                    </p>
+</div>
+<div class="bg-surface-container-lowest brutalist-border p-stack-lg brutalist-shadow">
+<h2 class="font-headline-md text-headline-md text-on-background mb-stack-md uppercase">SYSTEM CAPABILITIES</h2>
+<div class="flex flex-wrap gap-stack-sm font-label-bold text-label-bold uppercase">
+<span class="bg-electric-cyan text-black px-4 py-2 brutalist-border">UI/UX DESIGN</span>
+<span class="bg-white text-on-surface px-4 py-2 brutalist-border">FRONTEND DEV</span>
+<span class="bg-white text-on-surface px-4 py-2 brutalist-border">DESIGN SYSTEMS</span>
+<span class="bg-electric-cyan text-black px-4 py-2 brutalist-border">INTERACTION</span>
+<span class="bg-white text-on-surface px-4 py-2 brutalist-border">WEBGL / THREE.JS</span>
+</div>
+</div>
+</div>
+<!-- Right Side: Contact Form -->
+<div class="bg-surface-container-lowest brutalist-border p-stack-lg brutalist-shadow">
+<div class="flex items-center gap-4 mb-stack-lg">
+<span class="material-symbols-outlined text-headline-lg" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase tracking-tighter">
+                        TRANSMISSION
+                    </h2>
+</div>
+<form class="flex flex-col gap-stack-md">
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold uppercase text-on-background" for="name">IDENTIFIER (NAME)</label>
+<input class="w-full p-4 font-body-lg text-body-lg text-on-background brutalist-input brutalist-input-shadow" id="name" name="name" placeholder="ENTER IDENTIFIER" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold uppercase text-on-background" for="email">ROUTING PROTOCOL (EMAIL)</label>
+<input class="w-full p-4 font-body-lg text-body-lg text-on-background brutalist-input brutalist-input-shadow" id="email" name="email" placeholder="ENTER ROUTING PROTOCOL" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-bold text-label-bold uppercase text-on-background" for="message">PAYLOAD</label>
+<textarea class="w-full p-4 font-body-lg text-body-lg text-on-background brutalist-input brutalist-input-shadow resize-none" id="message" name="message" placeholder="INITIALIZE PAYLOAD..." rows="5"></textarea>
+</div>
+<button class="mt-stack-md bg-on-background text-electric-cyan font-label-bold text-label-bold text-lg px-8 py-4 uppercase brutalist-border brutalist-shadow brutalist-btn transition-all flex justify-center items-center gap-2" type="submit">
+<span class="material-symbols-outlined">send</span>
+                        SEND TRANSMISSION
+                    </button>
+</form>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-on-background dark:bg-surface-container-lowest border-t-4 border-on-background">
+<div class="flex flex-col md:flex-row justify-between items-center p-stack-lg gap-stack-md max-w-container-max mx-auto">
+<div class="font-label-bold text-body-md text-electric-cyan">
+                ©2024 DESIGNER.EXE. ALL RIGHTS RESERVED.
+            </div>
+<div class="flex gap-6 font-label-bold text-label-bold uppercase text-electric-cyan dark:text-electric-cyan">
+<a class="text-surface-variant hover:text-electric-cyan transition-opacity hover:scale-105 transition-transform" href="#">GITHUB</a>
+<a class="text-surface-variant hover:text-electric-cyan transition-opacity hover:scale-105 transition-transform" href="#">LINKEDIN</a>
+<a class="text-surface-variant hover:text-electric-cyan transition-opacity hover:scale-105 transition-transform" href="#">READCV</a>
+</div>
+</div>
+</footer>
+</body></html>

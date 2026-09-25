@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&amp;family=Geist:wght@400&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "surface-container": "#e7eff0",
+                "on-primary-container": "#006970",
+                "secondary-fixed-dim": "#c6c6c6",
+                "error": "#ba1a1a",
+                "background": "#f3fbfb",
+                "on-primary": "#ffffff",
+                "secondary": "#5e5e5e",
+                "outline-variant": "#b9cacb",
+                "primary-fixed": "#7df4ff",
+                "on-tertiary-fixed": "#1a1c1c",
+                "surface-tint": "#006970",
+                "secondary-container": "#e2e2e2",
+                "outline": "#6a7a7b",
+                "tertiary": "#5d5f5f",
+                "border-heavy": "#000000",
+                "on-secondary-fixed-variant": "#474747",
+                "tertiary-container": "#d9d9d9",
+                "on-secondary-fixed": "#1b1b1b",
+                "inverse-on-surface": "#eaf2f3",
+                "surface-container-lowest": "#ffffff",
+                "on-background": "#151d1e",
+                "on-tertiary-fixed-variant": "#454747",
+                "on-surface-variant": "#3b494b",
+                "electric-cyan": "#00F0FF",
+                "surface-container-low": "#edf5f6",
+                "surface-dim": "#d3dcdc",
+                "on-error-container": "#93000a",
+                "on-tertiary-container": "#5d5f5f",
+                "on-primary-fixed": "#002022",
+                "on-secondary": "#ffffff",
+                "on-error": "#ffffff",
+                "inverse-surface": "#2a3233",
+                "primary-container": "#00f0ff",
+                "surface-container-high": "#e1eaea",
+                "primary": "#006970",
+                "on-secondary-container": "#646464",
+                "on-surface": "#151d1e",
+                "surface-bright": "#f3fbfb",
+                "secondary-fixed": "#e2e2e2",
+                "on-tertiary": "#ffffff",
+                "tertiary-fixed-dim": "#c6c6c7",
+                "tertiary-fixed": "#e2e2e2",
+                "surface-variant": "#dce4e5",
+                "error-container": "#ffdad6",
+                "surface-neutral": "#F4F4F4",
+                "on-primary-fixed-variant": "#004f54",
+                "inverse-primary": "#00dbe9",
+                "primary-fixed-dim": "#00dbe9",
+                "surface": "#f3fbfb",
+                "surface-container-highest": "#dce4e5"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "container-max": "1280px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "margin-mobile": "16px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "section-gap": "120px"
+        },
+        "fontFamily": {
+                "label-bold": [
+                        "JetBrains Mono"
+                ],
+                "headline-xl-mobile": [
+                        "Space Grotesk"
+                ],
+                "headline-lg": [
+                        "Space Grotesk"
+                ],
+                "code-sm": [
+                        "JetBrains Mono"
+                ],
+                "headline-md": [
+                        "Space Grotesk"
+                ],
+                "headline-xl": [
+                        "Space Grotesk"
+                ],
+                "body-lg": [
+                        "Geist"
+                ],
+                "body-md": [
+                        "Geist"
+                ]
+        },
+        "fontSize": {
+                "label-bold": [
+                        "14px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "48px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "48px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "700"
+                        }
+                ],
+                "code-sm": [
+                        "13px",
+                        {
+                                "lineHeight": "1.4",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-md": [
+                        "32px",
+                        {
+                                "lineHeight": "1.3",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-xl": [
+                        "72px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "20px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.5",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+          .hard-shadow {
+              box-shadow: 4px 4px 0px 0px #1a1c1c;
+          }
+          .hard-shadow:hover {
+              transform: translate(4px, 4px);
+              box-shadow: 0px 0px 0px 0px #1a1c1c;
+              transition: all 0.1s ease-in-out;
+          }
+          .brutal-border {
+              border: 2px solid #1a1c1c;
+          }
+          .brutal-border-thick {
+              border: 4px solid #1a1c1c;
+          }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col pb-24 md:pb-0">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-on-background docked full-width top-0 border-b-4 border-on-background dark:border-surface flex justify-between items-center w-full px-margin-mobile h-16 sticky z-40 hidden md:flex">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed">terminal</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-on-background dark:text-surface">DESIGNER.EXE</span>
+</div>
+<nav class="flex items-center gap-gutter">
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-4 py-2 brutal-border bg-surface" href="#">HOME</a>
+<a class="text-primary font-bold text-label-bold font-label-bold translate-x-1 translate-y-1 transition-transform duration-75 px-4 py-2 brutal-border bg-primary-container hard-shadow" href="#">WORK</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-4 py-2 brutal-border bg-surface" href="#">ABOUT</a>
+<a class="text-on-surface-variant dark:text-surface-variant text-label-bold font-label-bold hover:bg-primary-container hover:text-on-primary-container transition-colors px-4 py-2 brutal-border bg-surface" href="#">CONTACT</a>
+</nav>
+<button class="bg-surface text-on-background font-label-bold text-label-bold px-4 py-2 brutal-border hard-shadow hover:bg-primary-container hover:text-on-primary-container transition-colors">
+            HIRE ME
+        </button>
+</header>
+<!-- Mobile Header Replacement -->
+<header class="bg-primary-container border-b-4 border-on-background flex justify-between items-center w-full px-margin-mobile py-4 md:hidden sticky top-0 z-40">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-background">terminal</span>
+<span class="text-headline-md font-headline-md font-bold tracking-tighter text-on-background">WORK</span>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto w-full px-margin-mobile md:px-gutter py-stack-lg md:py-section-gap flex flex-col gap-stack-lg">
+<!-- Hero Title -->
+<section class="mb-stack-lg">
+<h1 class="text-headline-xl-mobile md:text-headline-xl font-headline-xl-mobile md:font-headline-xl uppercase">Selected<br/><span class="bg-primary-container px-2">Projects</span></h1>
+</section>
+<!-- Project Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface brutal-border hard-shadow flex flex-col cursor-pointer group">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern fintech app dashboard featuring sleek dark mode UI with vibrant neon green accents, displaying complex financial graphs and user transaction history in a brutalist digital style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5HzeoC4iyQ4ck3ReTchhc4Lo9t7cYscK4Q90R2_eOxcsOIs9J1Eg3QT3j0uUg1qfzKCrXHvD0a3rrtJRR4w8PsX3bFEqtE1pAbCcGUkCnm59Pp6Je-oNsjeeqRsJx8gmnXFSiP8GP9vC2R7M4du4wzqgvom-fajk6yPnSJ2_8WyV00OjnODbphd40gc5U8zejvuSgyVr_smrb1tT0oXwHUg9FMkPUvXpTuFJDpUm4c-qXh99HjpsYMQ"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="bg-surface-variant text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">UI/UX</span>
+<span class="bg-primary-container text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">Fintech</span>
+</div>
+<h2 class="text-headline-md font-headline-md">Nexus Banking</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">Redesigning the core dashboard experience for a brutalist-inspired neo-banking platform.</p>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface brutal-border hard-shadow flex flex-col cursor-pointer group">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-primary-container">
+<img class="w-full h-full object-cover mix-blend-multiply group-hover:scale-105 transition-transform duration-300" data-alt="A bold typographic poster design for an electronic music festival, featuring high-contrast black and yellow colors, abstract geometric shapes, and a stark brutalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeMEANCim3IJ4FWJ53zQvlHrhfuPzcvO0OUceLLrc6b6NQRk1chSD0lcDBMaWIodJLzxflZSpuLfIBQ-ygNVUIXnO1W7UvLptPmISCu23ZcvPE67IZuU5sPuNcUcH-hTmxa_W_twq6Lg-XZizaLqFjumvfcOuIHhmNbcc-JVO4TwkveJ5669FUflROmINMbnb66lqDMTWCkRZ9rR4xrNlM8udAQjhnGQHkrRXABMj7m3BWx-j7QxWyaw"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="bg-surface-variant text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">Branding</span>
+<span class="bg-surface text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">Print</span>
+</div>
+<h2 class="text-headline-md font-headline-md">Synapse Festival</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">Visual identity and brutalist poster campaign for an underground electronic music event.</p>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface brutal-border hard-shadow flex flex-col cursor-pointer group">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-inverse-surface">
+<img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300" data-alt="A minimalist motion design sequence showing a 3D metallic cube unfolding into a complex architectural structure, stark lighting, set against a pure white background in a high-end brutalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC30jxt3eSJrlgep6vVmwdykDCHoTDT2XQZ0aPecmOr0uVnXtbsQlU-phDIhjfKtTtfj0Lqx-olMyx9GPPQE1TYyG0S0sJYACXyomGAsq2kSezkTsltDvTeY1fjodo6OFYDV_hi7NHy9hcLWevwNsQYjBAOnlzWY1YfzeNr_7Fz_3EGwxnZvPQLbVO3BNKtrxCmt8TK6YY0jlnmhhYK_1UUZoEKmVOT4kCT3NSR9sysYKifnU0U-H66nA"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="bg-surface-variant text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">Motion</span>
+</div>
+<h2 class="text-headline-md font-headline-md">Architectural Void</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">Experimental motion sequence exploring tension and release in structural forms.</p>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface brutal-border hard-shadow flex flex-col cursor-pointer group">
+<div class="h-48 border-b-2 border-on-background relative overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A developer documentation website interface, stark white background, heavy black borders, monospace typography, and bright yellow highlight boxes indicating code syntax." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_a91gcw6s1ECzeC36dfGnSNeYPk4MG_yef_7Jl0kj1tO_egw36SEZcuV07lORd4DZ9DJimZWWQiMGIhY2kIKOvHUm9C4FyO2rQM1YTNQ0ldf5mV_6WLYC-1kDO8k_rbjlLH3Tgj0cLRoWji9fmJOnsjNCwrMcQ4v7sZJiZY8nDCoz19pnlPhOr88pXvr7Kp-wYSgw0lZNkL4mwmruqE_x888b-lSO6qUDr6AXo74kIdAqUPCsV1Spkw"/>
+</div>
+<div class="p-stack-md flex flex-col gap-stack-sm flex-grow">
+<div class="flex gap-2 mb-2">
+<span class="bg-primary-container text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">Web Dev</span>
+<span class="bg-surface-variant text-on-background text-code-sm font-code-sm px-2 py-1 brutal-border rounded-full">UI/UX</span>
+</div>
+<h2 class="text-headline-md font-headline-md">DocuSys Framework</h2>
+<p class="text-body-md font-body-md text-on-surface-variant flex-grow">A brutally simple, high-performance documentation theme for modern JavaScript libraries.</p>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center h-20 px-2 bg-surface dark:bg-on-background border-t-4 border-on-background dark:border-surface md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-1 hover:bg-secondary-container dark:hover:bg-secondary" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-label-bold font-label-bold mt-1">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary-container dark:bg-primary text-on-primary-container dark:text-on-primary border-2 border-on-background dark:border-surface p-1 scale-110 hard-shadow transition-all duration-100" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-label-bold font-label-bold mt-1">WORK</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-1 hover:bg-secondary-container dark:hover:bg-secondary" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-label-bold font-label-bold mt-1">ABOUT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-surface-variant p-1 hover:bg-secondary-container dark:hover:bg-secondary" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-label-bold font-label-bold mt-1">CONTACT</span>
+</a>
+</nav>
+</body></html>
