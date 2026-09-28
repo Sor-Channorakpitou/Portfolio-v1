@@ -32,6 +32,111 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "seksa",
+    demo: "https://seksa.me",
+    title: "Seksa",
+    description:
+      "A bilingual (English/Khmer) scholarship platform for Cambodian students — real eligibility matching, application tracking and deadline reminders, with a Flutter mobile app.",
+    longDescription:
+      "A FastAPI + React platform that matches Cambodian students to scholarships they actually qualify for, explains what they're missing and guides them through applying — plus a Flutter companion app.",
+    year: "2026",
+    tags: ["FastAPI", "React", "Flutter"],
+    category: "Full Stack",
+    iconVisual: "school",
+    caseStudy: {
+      role: "Full-Stack & Mobile Developer",
+      timeline: "2026",
+      stack: ["Python", "FastAPI", "React", "PostgreSQL", "Flutter", "Docker", "Render", "Supabase"],
+      result: "Live at seksa.me",
+      challengeIntro:
+        "Scholarship information for Cambodian students is scattered across announcement pages and social posts, and students often can't tell which ones they actually qualify for.",
+      challengeDetail:
+        "Eligibility rules differ for every scholarship, deadlines are easy to miss, and listings go stale — so students waste time on applications they can't win and miss the ones they can.",
+      solutionIntro:
+        "Students fill in a profile once; Seksa checks real eligibility rules against every scholarship, explains what they meet and what's missing, and tracks each application to the deadline.",
+      solutionBullets: [
+        "Offline, rule-based matching and search — no AI service needed to find scholarships.",
+        "Admin discovery pipeline: sources are scanned on a schedule and nothing is published until an admin approves it.",
+        "Application workspace with documents, tasks, drafts and 30/14/7/3/1-day deadline reminders (in-app, email and .ics).",
+        "Full English and Khmer interface, plus a Flutter mobile app sharing the same API and accounts.",
+      ],
+      solutionTags: ["Full Stack", "Bilingual", "Mobile"],
+      artifacts: [
+        {
+          type: "icon",
+          icon: "fact_check",
+          label: "Eligibility Matching",
+          caption: "Every match shows which requirements are met, not met, or need verification.",
+        },
+        {
+          type: "terminal",
+          lines: ["$ docker compose -f docker-compose.dev.yml up", "> postgres   :5432 ✓", "> fastapi    :5000 ✓", "> vite       :5173 ✓"],
+          label: "One-Command Dev",
+          caption: "Database, API and frontend all boot and hot-reload together in Docker.",
+        },
+        {
+          type: "icon",
+          icon: "phone_iphone",
+          label: "Flutter App",
+          caption: "A mobile client using Provider and the same backend accounts to browse scholarships.",
+        },
+      ],
+      nextProjectSlug: "seksa-for-kids",
+    },
+  },
+  {
+    slug: "seksa-for-kids",
+    title: "Seksa for Kids",
+    description:
+      "A Khmer-first coding platform for kids aged 10–12 — robot puzzles, real Python running in the browser and a Socratic AI mentor that gives hints, not answers.",
+    longDescription:
+      "A Next.js + Supabase learning platform where Khmer-speaking kids learn to code by building things, with in-browser Python and an AI mentor built to teach rather than tell.",
+    year: "2026",
+    tags: ["Next.js", "Supabase", "AI"],
+    category: "Full Stack",
+    iconVisual: "smart_toy",
+    caseStudy: {
+      role: "Full-Stack Developer",
+      timeline: "2026",
+      stack: ["Next.js", "TypeScript", "Supabase", "Pyodide", "Claude API", "Vitest"],
+      result: "Think → Try → Fail → Hint → Build",
+      challengeIntro:
+        "Most coding resources are in English and built for older learners, leaving Khmer-speaking kids without an approachable way to start programming.",
+      challengeDetail:
+        "Kids need to run real code safely, get help without being handed the answer, and have their progress protected — all without exposing personal data to an AI model.",
+      solutionIntro:
+        "A Khmer-by-default platform with lessons, quests and projects, where Python runs sandboxed in the browser and an AI mentor follows a strict teaching policy.",
+      solutionBullets: [
+        "Python via Pyodide in a Web Worker with a hard 5-second timeout — student code never runs on the server.",
+        "AI mentor with hint/explain/debug modes, a solution-leak guard, privacy scrubbing and an offline fallback.",
+        "Pure, deterministic progress engine validated server-side, with Supabase row-level security.",
+        "Full Khmer/English parity enforced by tests that run every lesson solution through real Python.",
+      ],
+      solutionTags: ["EdTech", "AI Mentor", "Khmer-First"],
+      artifacts: [
+        {
+          type: "icon",
+          icon: "psychology",
+          label: "AI Mentor",
+          caption: "Questions → hints → explanations, with disclosure that grows only with real effort.",
+        },
+        {
+          type: "terminal",
+          lines: ["$ npm test", "> engine & mentor      :pass ✓", "> km/en parity        :pass ✓", "> lesson solutions    :pass ✓"],
+          label: "Tested Content",
+          caption: "Every lesson solution in both languages is executed, so a broken exercise can't ship.",
+        },
+        {
+          type: "icon",
+          icon: "translate",
+          label: "Khmer First",
+          caption: "Lessons, errors and the mentor all speak Khmer by default, with an English toggle.",
+        },
+      ],
+      nextProjectSlug: "medflow",
+    },
+  },
+  {
     slug: "medflow",
     repo: "https://github.com/Sor-Channorakpitou/MedFlow",
     title: "MedFlow",
@@ -342,7 +447,7 @@ export const projects: Project[] = [
           caption: "Showtimes and staff shifts managed side by side.",
         },
       ],
-      nextProjectSlug: "medflow",
+      nextProjectSlug: "seksa",
     },
   },
 ];
@@ -361,9 +466,9 @@ export function getNextProject(slug: string): Project {
 }
 
 export const workProjects = projects.filter((p) =>
-  ["medflow", "internmatch", "zoo-feeding-schedule", "temperature-humidity-web-monitor", "web-design-final-project", "term2-cinema-project"].includes(p.slug),
+  ["seksa", "seksa-for-kids", "medflow", "internmatch", "zoo-feeding-schedule", "temperature-humidity-web-monitor", "web-design-final-project", "term2-cinema-project"].includes(p.slug),
 );
 
 export const featuredProjects = projects.filter((p) =>
-  ["medflow", "internmatch", "zoo-feeding-schedule"].includes(p.slug),
+  ["seksa", "seksa-for-kids", "medflow"].includes(p.slug),
 );
