@@ -15,6 +15,8 @@ export type Project = {
   iconVisual?: string;
   repo?: string;
   demo?: string;
+  /** Shown in place of the Live Demo button when the project isn't published yet. */
+  demoPlaceholder?: string;
   caseStudy: {
     role: string;
     timeline: string;
@@ -86,6 +88,7 @@ export const projects: Project[] = [
   },
   {
     slug: "seksa-for-kids",
+    demoPlaceholder: "Live Demo · Coming Soon",
     title: "Seksa for Kids",
     description:
       "A Khmer-first coding platform for kids aged 10–12 — robot puzzles, real Python running in the browser and a Socratic AI mentor that gives hints, not answers.",

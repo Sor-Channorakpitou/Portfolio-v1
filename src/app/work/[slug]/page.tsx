@@ -68,7 +68,7 @@ export default async function ProjectDetailPage({
                 <p className="mb-1 font-mono text-label-bold text-primary">RESULT</p>
                 <p className="font-headline text-headline-md text-on-background">{caseStudy.result}</p>
               </div>
-              {(project.repo || project.demo) && (
+              {(project.repo || project.demo || project.demoPlaceholder) && (
                 <div className="col-span-2 flex flex-wrap gap-3 border-t-2 border-on-background pt-3">
                   {project.repo && (
                     <a
@@ -89,6 +89,14 @@ export default async function ProjectDetailPage({
                     >
                       <Icon name="open_in_new" /> Live Demo
                     </a>
+                  )}
+                  {!project.demo && project.demoPlaceholder && (
+                    <span
+                      aria-disabled="true"
+                      className="flex cursor-default items-center gap-2 border-2 border-dashed border-on-background bg-surface-container-lowest px-3 py-1.5 font-mono text-label-bold uppercase text-on-background opacity-70"
+                    >
+                      <Icon name="schedule" /> {project.demoPlaceholder}
+                    </span>
                   )}
                 </div>
               )}
