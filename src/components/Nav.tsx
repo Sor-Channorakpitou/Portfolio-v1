@@ -60,7 +60,7 @@ export default function Nav() {
           <ThemeToggle />
           <Link
             href="/about#contact"
-            className="hidden border-2 border-black bg-white px-6 py-2 font-mono text-label-bold uppercase text-electric-cyan shadow-[4px_4px_0px_0px_#000000] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none md:inline-block dark:border-white dark:bg-background dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]"
+            className="hidden border-2 border-black bg-white px-6 py-2 font-mono text-label-bold uppercase text-on-background shadow-[4px_4px_0px_0px_#000000] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none md:inline-block dark:border-white dark:bg-background dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]"
           >
             Hire Me
           </Link>

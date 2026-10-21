@@ -1,5 +1,4 @@
 import Icon from "@/components/Icon";
-import RoadmapSection from "@/components/RoadmapSection";
 import { milestones } from "@/data/journey";
 
 const typeConfig = {
@@ -7,27 +6,27 @@ const typeConfig = {
     label: "EDUCATION",
     icon: "school",
     color: "bg-electric-cyan dark:bg-primary-fixed",
-    text: "text-white dark:text-on-primary-fixed",
+    text: "text-black",
   },
   academic: {
     label: "ACADEMIC",
     icon: "science",
     color: "bg-rose-500 dark:bg-rose-400",
-    text: "text-white",
+    text: "text-black",
   },
-  work: { label: "WORK", icon: "work", color: "bg-blue-500 dark:bg-blue-400", text: "text-white" },
+  work: { label: "WORK", icon: "work", color: "bg-blue-500 dark:bg-blue-400", text: "text-black" },
   volunteer: {
     label: "VOLUNTEER",
     icon: "volunteer_activism",
     color: "bg-emerald-500 dark:bg-emerald-400",
-    text: "text-white",
+    text: "text-black",
   },
-  external: { label: "EXTERNAL", icon: "open_in_new", color: "bg-amber-500 dark:bg-amber-400", text: "text-white dark:text-black" },
+  external: { label: "EXTERNAL", icon: "open_in_new", color: "bg-amber-500 dark:bg-amber-400", text: "text-black" },
   achievement: {
     label: "ACHIEVEMENT",
     icon: "emoji_events",
     color: "bg-violet-500 dark:bg-violet-400",
-    text: "text-white",
+    text: "text-black",
   },
 };
 
@@ -44,7 +43,7 @@ export default function JourneyPage() {
       </section>
 
       <section className="relative">
-        <div className="absolute left-4 top-0 h-full w-2 bg-surface-variant md:left-1/2 md:-translate-x-1/2">
+        <div className="absolute left-5 top-0 h-full w-2 -translate-x-1/2 bg-surface-variant md:left-1/2">
           <div className="mx-auto h-full w-0.5 border-l-2 border-dashed border-on-surface-variant md:border-l-4" />
         </div>
 
@@ -54,11 +53,11 @@ export default function JourneyPage() {
             const isLeft = index % 2 === 0;
             return (
               <div key={milestone.title} className="relative pb-section-gap">
-                <div className="absolute left-4 top-2 z-10 md:left-1/2 md:top-0.5 md:-translate-x-1/2">
+                <div className="absolute left-5 top-6 z-10 -translate-x-1/2 md:left-1/2 md:top-0.5">
                   <span
-                    className={`flex h-5 w-5 items-center justify-center border-2 border-on-background text-xs shadow-brutal dark:shadow-[2px_2px_0px_0px_#ffffff] md:h-8 md:w-8 ${config.color} ${config.text}`}
+                    className={`flex h-8 w-8 items-center justify-center border-2 border-on-background shadow-brutal dark:shadow-[2px_2px_0px_0px_#ffffff] ${config.color} ${config.text}`}
                   >
-                    <Icon name={config.icon} className="hidden text-base leading-none md:block" />
+                    <Icon name={config.icon} className="text-base leading-none" />
                   </span>
                 </div>
 
@@ -95,7 +94,7 @@ export default function JourneyPage() {
         </div>
       </section>
 
-      <RoadmapSection />
+      {/* Career roadmap hidden for now — re-enable by restoring <RoadmapSection /> */}
     </main>
   );
 }

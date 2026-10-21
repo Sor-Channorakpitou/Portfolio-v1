@@ -14,7 +14,9 @@ export function FeaturedCard({ project }: { project: Project }) {
             src={project.image}
             alt={project.title}
             loading="lazy"
-            className="h-full w-full object-cover transition-all duration-300"
+            className={`h-full w-full transition-all duration-300 ${
+              project.imageFit === "logo" ? "bg-white object-contain p-8" : "object-cover"
+            }`}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-primary-container">
@@ -57,7 +59,9 @@ export function WorkCard({ project }: { project: Project }) {
             src={project.image}
             alt={project.title}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className={`h-full w-full transition-transform duration-500 group-hover:scale-105 ${
+              project.imageFit === "logo" ? "bg-white object-contain p-8" : "object-cover"
+            }`}
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-primary-container">

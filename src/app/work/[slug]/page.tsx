@@ -107,12 +107,20 @@ export default async function ProjectDetailPage({
 
       <main className="mx-auto flex max-w-page flex-col gap-section-gap px-margin-mobile py-section-gap md:px-gutter">
         {project.image && (
-          <div className="overflow-hidden border-2 border-on-background bg-surface-container-lowest p-2 shadow-brutal">
+          <div
+            className={`overflow-hidden border-2 border-on-background shadow-brutal ${
+              project.imageFit === "logo"
+                ? "bg-white p-8 md:p-16"
+                : "mx-auto w-full max-w-5xl bg-surface-container-lowest p-2"
+            }`}
+          >
             <img
               src={project.image}
-              alt={`${project.title} screenshot`}
+              alt={project.imageFit === "logo" ? `${project.title} logo` : `${project.title} screenshot`}
               loading="lazy"
-              className="w-full object-cover"
+              className={
+                project.imageFit === "logo" ? "mx-auto max-h-48 w-full object-contain" : "block h-auto w-full"
+              }
             />
           </div>
         )}

@@ -1,7 +1,7 @@
 import Icon from "@/components/Icon";
 import ContactForm from "@/components/ContactForm";
 
-type Skill = { name: string; level: number };
+type Skill = { name: string; level: number; learning?: boolean };
 type SkillGroup = { category: string; skills: Skill[] };
 
 const TECH_STACK: SkillGroup[] = [
@@ -10,9 +10,7 @@ const TECH_STACK: SkillGroup[] = [
     skills: [
       { name: "TypeScript", level: 3 },
       { name: "JavaScript", level: 3 },
-      { name: "Java", level: 2 },
-      { name: "C++", level: 2 },
-      { name: "C", level: 2 },
+      { name: "Python", level: 3 },
       { name: "SQL", level: 3 },
     ],
   },
@@ -21,6 +19,7 @@ const TECH_STACK: SkillGroup[] = [
     skills: [
       { name: "React", level: 3 },
       { name: "Tailwind CSS", level: 3 },
+      { name: "Vite", level: 3 },
     ],
   },
   {
@@ -28,23 +27,31 @@ const TECH_STACK: SkillGroup[] = [
     skills: [
       { name: "Node / Express", level: 3 },
       { name: "REST APIs", level: 3 },
+      { name: "Socket.IO", level: 2 },
+      { name: "NestJS", level: 1, learning: true },
     ],
   },
   {
     category: "DATABASES",
     skills: [
       { name: "PostgreSQL", level: 3 },
-      { name: "MySQL", level: 3 },
-      { name: "MongoDB", level: 2 },
+      { name: "Prisma", level: 3 },
     ],
   },
   {
-    category: "TOOLS & HARDWARE",
+    category: "DEVOPS & CI/CD",
     skills: [
       { name: "Git", level: 3 },
+      { name: "GitHub Actions", level: 2 },
+      { name: "Docker", level: 2 },
       { name: "Vercel / Render", level: 2 },
-      { name: "ESP32 / PlatformIO", level: 2 },
-      { name: "Figma", level: 2 },
+    ],
+  },
+  {
+    category: "AI INTEGRATION",
+    skills: [
+      { name: "LLM APIs", level: 2 },
+      { name: "AI-Assisted Dev", level: 3 },
     ],
   },
 ];
@@ -61,6 +68,14 @@ const SOFT_SKILLS: SkillGroup[] = [
       { name: "Leadership", level: 3 },
       { name: "Entrepreneurship", level: 3 },
       { name: "Time Management", level: 3 },
+    ],
+  },
+  {
+    category: "PROJECT MANAGEMENT",
+    skills: [
+      { name: "Scrum", level: 3 },
+      { name: "Sprint Planning", level: 3 },
+      { name: "Kanban", level: 3 },
     ],
   },
 ];
@@ -110,7 +125,14 @@ function SkillCard({ title, groups }: { title: string; groups: SkillGroup[] }) {
                   key={skill.name}
                   className="flex items-center justify-between gap-4 font-mono text-code-sm"
                 >
-                  <span className="uppercase text-on-background">{skill.name}</span>
+                  <span className="flex flex-wrap items-center gap-2 uppercase text-on-background">
+                    {skill.name}
+                    {skill.learning && (
+                      <span className="border border-on-background bg-primary-container px-1 text-[10px] font-bold leading-4 text-black">
+                        LEARNING
+                      </span>
+                    )}
+                  </span>
                   <span className="flex gap-1" aria-label={`${skill.level} of 5`}>
                     {[1, 2, 3, 4, 5].map((n) => (
                       <span
@@ -227,7 +249,7 @@ export default function AboutPage() {
                 TRANSMISSION
               </h2>
             </div>
-            <span className="hidden bg-badge-shadow px-2 py-1 font-mono text-label-bold uppercase text-primary-fixed dark:text-primary-fixed shadow-[4px_4px_0px_0px_var(--color-on-background)] md:block dark:bg-background dark:shadow-[4px_4px_0px_0px_#ffffff]">
+            <span className="hidden bg-on-background px-2 py-1 font-mono text-label-bold uppercase text-primary-container dark:text-primary-fixed shadow-[4px_4px_0px_0px_var(--color-on-background)] md:block dark:bg-background dark:shadow-[4px_4px_0px_0px_#ffffff]">
               Status: Open
             </span>
           </div>

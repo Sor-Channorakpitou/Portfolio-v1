@@ -114,7 +114,7 @@
 .dark {
   color-scheme: dark;
 
-  /* ===== Electric Brutalist — dark palette (cyan → signal yellow) ===== */
+  /* ===== Electric Brutalist — dark palette (soft cyan accent) ===== */
   --color-background: #101718;
   --color-on-background: #eaf2f3;
   --color-surface: #101718;
@@ -129,18 +129,18 @@
   --color-surface-bright: #374041;
   --color-on-surface: #eaf2f3;
   --color-on-surface-variant: #b9cacb;
-  --color-primary: #f1c40f;
-  --color-on-primary: #00363a;
-  --color-primary-container: #f1c40f;
-  --color-on-primary-container: #524700;
-  --color-primary-fixed: #f1c40f;
-  --color-primary-fixed-dim: #f1c40f;
-  --color-on-primary-fixed: #211b00;
-  --color-on-primary-fixed-variant: #524700;
-  --color-inverse-primary: #f1c40f;
+  --color-primary: #5ce1e6;
+  --color-on-primary: #002022;
+  --color-primary-container: #5ce1e6;
+  --color-on-primary-container: #004f54;
+  --color-primary-fixed: #5ce1e6;
+  --color-primary-fixed-dim: #5ce1e6;
+  --color-on-primary-fixed: #002022;
+  --color-on-primary-fixed-variant: #004f54;
+  --color-inverse-primary: #5ce1e6;
   --color-inverse-surface: #e7eff0;
   --color-inverse-on-surface: #2a3233;
-  --color-electric-cyan: #f1c40f;
+  --color-electric-cyan: #5ce1e6;
   --color-border-heavy: #000000;
   --color-badge-shadow: #000000;
   --color-secondary-fixed: #1b1b1b;
@@ -151,9 +151,9 @@
   --color-on-error: #690005;
   --color-on-error-container: #ffdad6;
 
-  /* Hard-offset shadows read stronger on dark — keep them black */
-  --shadow-brutal: 4px 4px 0px 0px rgba(0, 0, 0, 0.9);
-  --shadow-brutal-lg: 8px 8px 0px 0px rgba(0, 0, 0, 0.9);
+  /* Hard-offset shadows flip to white so they stay visible on the dark background */
+  --shadow-brutal: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+  --shadow-brutal-lg: 8px 8px 0px 0px rgba(255, 255, 255, 1);
 }
 
 @layer base {
