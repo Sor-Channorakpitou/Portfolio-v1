@@ -44,7 +44,7 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="relative hidden h-[500px] w-full flex-1 md:block">
+          <div className="relative hidden h-125 w-full flex-1 md:block">
             <div className="absolute right-0 top-0 flex h-[400px] w-[400px] rotate-3 items-center justify-center overflow-hidden border-4 border-on-background bg-on-background shadow-[8px_8px_0px_0px_#ffffff] transition-transform duration-300 hover:rotate-0 dark:shadow-brutal-lg">
               <img
                 src="/hero.jpg"

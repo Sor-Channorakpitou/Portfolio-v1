@@ -45,7 +45,7 @@ export const milestones: Milestone[] = [
     subtitle: "Full Stack Development Track",
     type: "external",
     description:
-      "Selected as 1 of 60 candidates from over 1,100 applicants for DICHI Academy × ELIX's fully-funded 7-month tech entrepreneurship bootcamp. Progressing through the accelerated learning phase toward MVP development.",
+      "Selected as 1 of 60 candidates from over 1,100 applicants for DICHI Academy × ELIX's fully-funded 7-month tech entrepreneurship bootcamp. Nearing the end of the intensive learning phase, heading into ideation and MVP development.",
   },
   {
     year: "2026",
@@ -77,7 +77,7 @@ export const milestones: Milestone[] = [
     subtitle: "Cross-Department Collaboration",
     type: "external",
     description:
-      "Working with a cross-department team (CS, Digital Business, Telecom & Networking) on the DMIL framework published by MPTC — defining a problem from Cambodia's digital literacy standard.",
+      "Worked with a cross-department team (CS, Digital Business, Telecom & Networking) on the DMIL framework published by MPTC — defined a problem from Cambodia's digital literacy standard.",
   },
   {
     year: "2026 — 2027",
@@ -85,6 +85,6 @@ export const milestones: Milestone[] = [
     subtitle: "Computer Science — CADT",
     type: "education",
     description:
-      "Entering Year 3 with courses in Cybersecurity, Mobile Development, Project Management, and Game Development — moving toward deeper specialization in software engineering.",
+      "Now in Year 3 with courses in Cybersecurity, Mobile Development, Project Management, Game Development, and Capstone Project I — moving toward deeper specialization in software engineering.",
   },
 ];

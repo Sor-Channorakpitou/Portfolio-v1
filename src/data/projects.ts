@@ -204,6 +204,7 @@ export const projects: Project[] = [
     tags: ["React", "Tailwind"],
     category: "Frontend",
     iconVisual: "work",
+    image: "/InternMatch-logo.png",
     caseStudy: {
       role: "Frontend Developer",
       timeline: "2026",
@@ -256,6 +257,7 @@ export const projects: Project[] = [
     tags: ["Java", "Swing", "MySQL"],
     category: "Desktop",
     iconVisual: "pets",
+    image: "/ZMS-logo.png",
     caseStudy: {
       role: "Software Engineer (OOP)",
       timeline: "2026",

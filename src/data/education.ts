@@ -95,6 +95,7 @@ export const educationTimeline: TimelineEntry[] = [
           "Fundamental of Mobile Development",
           "Project Management",
           "Fundamental of Game Development",
+          "Capstone Project I",
         ],
       },
     ],
