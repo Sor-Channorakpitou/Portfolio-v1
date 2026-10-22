@@ -73,7 +73,7 @@ export const milestones: Milestone[] = [
   },
   {
     year: "2026",
-    title: "DMIL Framework Challenge",
+    title: "NGEP Program — Batch III",
     subtitle: "Cross-Department Collaboration",
     type: "external",
     description:

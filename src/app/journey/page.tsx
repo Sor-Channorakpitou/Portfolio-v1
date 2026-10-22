@@ -43,16 +43,19 @@ export default function JourneyPage() {
       </section>
 
       <section className="relative">
-        <div className="absolute left-5 top-0 h-full w-2 -translate-x-1/2 bg-surface-variant md:left-1/2">
-          <div className="mx-auto h-full w-0.5 border-l-2 border-dashed border-on-surface-variant md:border-l-4" />
-        </div>
-
         <div className="relative mx-auto max-w-4xl">
           {milestones.map((milestone, index) => {
             const config = typeConfig[milestone.type];
             const isLeft = index % 2 === 0;
+            const isLast = index === milestones.length - 1;
             return (
-              <div key={milestone.title} className="relative pb-section-gap">
+              <div key={milestone.title} className={`relative ${isLast ? "" : "pb-section-gap"}`}>
+                {/* Each segment runs from this dot down to the next one, so the line stops at the last milestone */}
+                {!isLast && (
+                  <div className="absolute -bottom-6 left-5 top-6 w-2 -translate-x-1/2 bg-surface-variant md:-bottom-0.5 md:left-1/2 md:top-0.5">
+                    <div className="mx-auto h-full w-0.5 border-l-2 border-dashed border-on-surface-variant md:border-l-4" />
+                  </div>
+                )}
                 <div className="absolute left-5 top-6 z-10 -translate-x-1/2 md:left-1/2 md:top-0.5">
                   <span
                     className={`flex h-8 w-8 items-center justify-center border-2 border-on-background shadow-brutal dark:shadow-[2px_2px_0px_0px_#ffffff] ${config.color} ${config.text}`}

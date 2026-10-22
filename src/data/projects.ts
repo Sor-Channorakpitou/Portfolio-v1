@@ -20,6 +20,8 @@ export type Project = {
   demo?: string;
   /** Shown in place of the Live Demo button when the project isn't published yet. */
   demoPlaceholder?: string;
+  /** Kept in the data but left off the site (lists, case-study pages, sitemap). */
+  hidden?: boolean;
   caseStudy: {
     role: string;
     timeline: string;
@@ -35,23 +37,25 @@ export type Project = {
   };
 };
 
-export const projects: Project[] = [
+const allProjects: Project[] = [
   {
     slug: "seksa",
     demo: "https://seksa.me",
     title: "Seksa",
     description:
-      "A bilingual (English/Khmer) scholarship platform for Cambodian students — real eligibility matching, application tracking and deadline reminders, with a Flutter mobile app.",
+      "A bilingual (English/Khmer) scholarship platform for Cambodian students — real eligibility matching, application tracking and deadline reminders.",
     longDescription:
-      "A FastAPI + React platform that matches Cambodian students to scholarships they actually qualify for, explains what they're missing and guides them through applying — plus a Flutter companion app.",
+      "A FastAPI + React platform that matches Cambodian students to scholarships they actually qualify for, explains what they're missing and guides them through applying.",
     year: "2026",
-    tags: ["FastAPI", "React", "Flutter"],
+    tags: ["FastAPI", "React", "PostgreSQL"],
     category: "Full Stack",
     iconVisual: "school",
+    image: "/seksa-logo.png",
+    imageFit: "logo",
     caseStudy: {
-      role: "Full-Stack & Mobile Developer",
+      role: "Full-Stack Developer",
       timeline: "2026",
-      stack: ["Python", "FastAPI", "React", "PostgreSQL", "Flutter", "Docker", "Render", "Supabase"],
+      stack: ["Python", "FastAPI", "React", "PostgreSQL", "Docker", "Render", "Supabase"],
       result: "Live at seksa.me",
       challengeIntro:
         "Scholarship information for Cambodian students is scattered across announcement pages and social posts, and students often can't tell which ones they actually qualify for.",
@@ -63,15 +67,15 @@ export const projects: Project[] = [
         "Offline, rule-based matching and search — no AI service needed to find scholarships.",
         "Admin discovery pipeline: sources are scanned on a schedule and nothing is published until an admin approves it.",
         "Application workspace with documents, tasks, drafts and 30/14/7/3/1-day deadline reminders (in-app, email and .ics).",
-        "Full English and Khmer interface, plus a Flutter mobile app sharing the same API and accounts.",
+        "Full English and Khmer interface across every page.",
       ],
-      solutionTags: ["Full Stack", "Bilingual", "Mobile"],
+      solutionTags: ["Full Stack", "Bilingual", "Live Product"],
       artifacts: [
         {
-          type: "icon",
-          icon: "fact_check",
-          label: "Eligibility Matching",
-          caption: "Every match shows which requirements are met, not met, or need verification.",
+          type: "image",
+          src: "/seksa-eligibility.jpg",
+          label: "Eligibility Requirements",
+          caption: "Every scholarship lists its eligibility rules; signed-in students see which ones they meet or miss.",
         },
         {
           type: "terminal",
@@ -80,17 +84,18 @@ export const projects: Project[] = [
           caption: "Database, API and frontend all boot and hot-reload together in Docker.",
         },
         {
-          type: "icon",
-          icon: "phone_iphone",
-          label: "Flutter App",
-          caption: "A mobile client using Provider and the same backend accounts to browse scholarships.",
+          type: "image",
+          src: "/seksa-khmer-home.jpg",
+          label: "Khmer Interface",
+          caption: "The live homepage in Khmer — every page can switch between Khmer and English.",
         },
       ],
-      nextProjectSlug: "seksa-for-kids",
+      nextProjectSlug: "medflow",
     },
   },
   {
     slug: "seksa-for-kids",
+    hidden: true,
     demoPlaceholder: "Live Demo · Coming Soon",
     title: "Seksa for Kids",
     description:
@@ -646,6 +651,8 @@ export const projects: Project[] = [
   },
 ];
 
+export const projects = allProjects.filter((p) => !p.hidden);
+
 export function getAllProjects(): Project[] {
   return projects;
 }
@@ -664,5 +671,5 @@ export const workProjects = projects.filter((p) =>
 );
 
 export const featuredProjects = projects.filter((p) =>
-  ["seksa", "seksa-for-kids", "medflow"].includes(p.slug),
+  ["seksa", "seksa-for-kids", "medflow", "zoo-feeding-schedule"].includes(p.slug),
 );

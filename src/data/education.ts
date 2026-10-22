@@ -132,6 +132,13 @@ export const certificates: Certificate[] = [
     link: "https://drive.google.com/file/d/1_xuFWTrQIR5bQj7N9MHufUBKH37XE4l5/view",
   },
   {
+    title: "Introduction to Cyber Attack",
+    issuer: "Udemy",
+    year: "2026",
+    note: "Online course on the fundamentals of common cyber attacks.",
+    link: "https://drive.google.com/file/d/1fnjK23U7cAF4TD8C2-WDISrCLmNJ2yi1/view",
+  },
+  {
     title: "CCNA: Introduction to Networks",
     issuer: "Cisco Networking Academy",
     year: "2025",

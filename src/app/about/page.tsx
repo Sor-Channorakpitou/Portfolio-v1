@@ -26,8 +26,6 @@ const TECH_STACK: SkillGroup[] = [
     category: "BACKEND",
     skills: [
       { name: "Node / Express", level: 3 },
-      { name: "REST APIs", level: 3 },
-      { name: "Socket.IO", level: 2 },
       { name: "NestJS", level: 1, learning: true },
     ],
   },
@@ -36,6 +34,15 @@ const TECH_STACK: SkillGroup[] = [
     skills: [
       { name: "PostgreSQL", level: 3 },
       { name: "Prisma", level: 3 },
+      { name: "MySQL", level: 2 },
+    ],
+  },
+  {
+    category: "NETWORKING",
+    skills: [
+      { name: "TCP/IP & Subnetting", level: 2 },
+      { name: "Routing & Switching", level: 2 },
+      { name: "Cisco IOS / Packet Tracer", level: 2 },
     ],
   },
   {
@@ -48,10 +55,12 @@ const TECH_STACK: SkillGroup[] = [
     ],
   },
   {
-    category: "AI INTEGRATION",
+    category: "TOOLS",
     skills: [
-      { name: "LLM APIs", level: 2 },
-      { name: "AI-Assisted Dev", level: 3 },
+      { name: "Linux", level: 2 },
+      { name: "Postman / Swagger", level: 2 },
+      { name: "VS Code", level: 3 },
+      { name: "Claude Code", level: 3 },
     ],
   },
 ];
@@ -62,11 +71,8 @@ const SOFT_SKILLS: SkillGroup[] = [
     skills: [
       { name: "Communication", level: 4 },
       { name: "Teamwork & Collaboration", level: 4 },
-      { name: "Teaching & Mentoring", level: 3 },
       { name: "Problem Solving", level: 3 },
       { name: "Research & Analysis", level: 3 },
-      { name: "Leadership", level: 3 },
-      { name: "Entrepreneurship", level: 3 },
       { name: "Time Management", level: 3 },
     ],
   },
@@ -94,6 +100,12 @@ const ACHIEVEMENTS = [
       "Introduction to JavaScript, Database and Entity Relation Diagrams, Project Management & Git and Frontend Development with ReactJS.",
   },
   {
+    title: "Academic Ranking",
+    year: "2026",
+    description:
+      "Ranked 33 of 351 in Year 1 and 15 of 139 in Year 2 of the Bachelor of Computer Science at CADT.",
+  },
+  {
     title: "NGEP Batch II — Completed",
     year: "2025",
     description:
@@ -107,13 +119,22 @@ const ACHIEVEMENTS = [
   },
 ];
 
-function SkillCard({ title, groups }: { title: string; groups: SkillGroup[] }) {
+function SkillCard({
+  title,
+  groups,
+  columns = "",
+}: {
+  title: string;
+  groups: SkillGroup[];
+  /** Grid column classes for laying the groups out side by side on wider screens. */
+  columns?: string;
+}) {
   return (
     <div className="border-2 border-on-background bg-surface-container-lowest p-stack-lg shadow-brutal">
       <h2 className="mb-stack-md font-headline text-headline-md uppercase text-on-background">
         {title}
       </h2>
-      <div className="flex flex-col gap-stack-lg">
+      <div className={`grid grid-cols-1 gap-stack-lg ${columns}`}>
         {groups.map((group) => (
           <div key={group.category}>
             <p className="mb-stack-sm border-b-2 border-on-background pb-1 font-mono text-label-bold uppercase text-primary">
@@ -183,29 +204,6 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-stack-lg md:grid-cols-2">
-            <SkillCard title="TECH STACK" groups={TECH_STACK} />
-            <SkillCard title="SOFT SKILLS" groups={SOFT_SKILLS} />
-          </div>
-
-          <div className="border-2 border-on-background bg-surface-container-lowest p-stack-lg shadow-brutal">
-            <h2 className="mb-stack-md flex items-center gap-3 font-headline text-headline-md uppercase text-on-background">
-              <Icon name="workspace_premium" filled className="text-3xl text-primary" />
-              ACHIEVEMENTS
-            </h2>
-            <ul className="space-y-stack-md">
-              {ACHIEVEMENTS.map((award) => (
-                <li key={award.title} className="border-l-4 border-electric-cyan pl-4">
-                  <p className="font-mono text-label-bold uppercase text-primary">{award.year}</p>
-                  <h3 className="font-headline text-headline-md uppercase text-on-background">
-                    {award.title}
-                  </h3>
-                  <p className="text-body-md text-on-surface-variant">{award.description}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           <nav className="flex flex-col gap-4 font-mono text-label-bold uppercase">
             {CONTACT_CHANNELS.map((channel) => {
               const external = channel.href.startsWith("http");
@@ -214,10 +212,10 @@ export default function AboutPage() {
                   key={channel.label}
                   href={channel.href}
                   {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  className="flex w-max items-center gap-4 border-2 border-transparent p-3 text-on-background transition-all hover:border-on-background hover:bg-electric-cyan dark:hover:text-on-primary-container"
+                  className="flex w-fit max-w-full items-center gap-4 border-2 border-transparent p-3 text-on-background transition-all hover:border-on-background hover:bg-electric-cyan dark:hover:text-on-primary-container"
                 >
-                  <Icon name={channel.icon} className="text-2xl" />
-                  {channel.label}
+                  <Icon name={channel.icon} className="shrink-0 text-2xl" />
+                  <span className="min-w-0 break-all">{channel.label}</span>
                 </a>
               );
             })}
@@ -245,7 +243,7 @@ export default function AboutPage() {
                 filled
                 className="text-[40px] text-on-background dark:text-on-primary-fixed"
               />
-              <h2 className="font-headline text-headline-lg uppercase tracking-tighter text-on-background dark:text-on-primary-fixed">
+              <h2 className="font-headline text-headline-md uppercase md:text-headline-lg tracking-tighter text-on-background dark:text-on-primary-fixed">
                 TRANSMISSION
               </h2>
             </div>
@@ -261,6 +259,34 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+
+      {/* Skills: full width so the long tech stack spreads into columns instead of one tall card */}
+      <section className="mt-section-gap flex flex-col gap-gutter">
+        <div className="grid grid-cols-1 gap-gutter lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <SkillCard title="TECH STACK" groups={TECH_STACK} columns="sm:grid-cols-2 xl:grid-cols-3" />
+          </div>
+          <SkillCard title="SOFT SKILLS" groups={SOFT_SKILLS} />
+        </div>
+
+        <div className="border-2 border-on-background bg-surface-container-lowest p-stack-lg shadow-brutal">
+            <h2 className="mb-stack-md flex items-center gap-3 font-headline text-headline-md uppercase text-on-background">
+              <Icon name="workspace_premium" filled className="text-3xl text-primary" />
+              ACHIEVEMENTS
+            </h2>
+            <ul className="grid grid-cols-1 gap-stack-lg md:grid-cols-2 lg:grid-cols-3">
+              {ACHIEVEMENTS.map((award) => (
+                <li key={award.title} className="border-l-4 border-electric-cyan pl-4">
+                  <p className="font-mono text-label-bold uppercase text-primary">{award.year}</p>
+                  <h3 className="font-headline text-headline-md uppercase text-on-background">
+                    {award.title}
+                  </h3>
+                  <p className="text-body-md text-on-surface-variant">{award.description}</p>
+                </li>
+              ))}
+            </ul>
+        </div>
+      </section>
     </main>
   );
 }

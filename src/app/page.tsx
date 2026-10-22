@@ -18,8 +18,8 @@ export default function HomePage() {
             </h1>
             <p className="mb-stack-lg max-w-xl border-on-background bg-surface-container-lowest p-stack-md font-mono text-body-lg font-bold text-on-background shadow-brutal dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]">
               Sor Channorakpitou, Third-year software engineering student building fast, clean, no-nonsense
-              interfaces. Currently powered by React, TypeScript and too much caffeine — every
-              project is a chance to push the voltage higher.
+              interfaces. Currently powered by React, TypeScript and too much caffeine — and if
+              my code works on the first try, I get suspicious.
             </p>
             <div className="flex flex-wrap gap-stack-md">
               <Link
@@ -44,15 +44,15 @@ export default function HomePage() {
               </a>
             </div>
           </div>
-          <div className="relative hidden h-125 w-full flex-1 md:block">
-            <div className="absolute right-0 top-0 flex h-[400px] w-[400px] rotate-3 items-center justify-center overflow-hidden border-4 border-on-background bg-on-background shadow-[8px_8px_0px_0px_#ffffff] transition-transform duration-300 hover:rotate-0 dark:shadow-brutal-lg">
+          <div className="relative order-first mx-auto mb-stack-md h-64 w-64 sm:h-80 sm:w-80 md:order-none md:mx-0 md:mb-0 md:h-125 md:w-full md:flex-1">
+            <div className="absolute inset-0 flex rotate-3 md:inset-auto md:right-0 md:top-0 md:h-[400px] md:w-[400px] items-center justify-center overflow-hidden border-4 border-on-background bg-on-background shadow-[8px_8px_0px_0px_#ffffff] transition-transform duration-300 hover:rotate-0 dark:shadow-brutal-lg">
               <img
                 src="/hero.jpg"
                 alt="Sor Channorakpitou"
                 className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
-            <div className="absolute bottom-[50px] right-[300px] z-20 -rotate-6 bg-surface-container-lowest p-stack-sm shadow-brutal dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]">
+            <div className="absolute -bottom-4 -left-4 z-20 -rotate-6 md:bottom-[50px] md:left-auto md:right-[300px] bg-surface-container-lowest p-stack-sm shadow-brutal dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]">
               <span className="font-mono text-label-bold uppercase text-on-background dark:text-primary-fixed">
                 System Ready // 100%
               </span>

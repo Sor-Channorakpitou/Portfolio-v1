@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    title: "DMIL Framework Challenge",
+    title: "NGEP Program — Batch III",
     period: "2026 · 5 WEEKS",
     category: "EXTERNAL PROJECT",
     description:
