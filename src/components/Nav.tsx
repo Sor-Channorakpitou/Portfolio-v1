@@ -7,6 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 const NAV_LINKS = [
   { label: "ABOUT", href: "/about" },
   { label: "WORK", href: "/work" },
+  { label: "SERVICES", href: "/services" },
   { label: "JOURNEY", href: "/journey" },
   { label: "EDUCATION", href: "/education" },
 ];
@@ -59,7 +60,7 @@ export default function Nav() {
         <div className="flex items-center gap-stack-md">
           <ThemeToggle />
           <Link
-            href="/about#contact"
+            href="/services"
             className="hidden border-2 border-black bg-white px-6 py-2 font-mono text-label-bold uppercase text-on-background shadow-[4px_4px_0px_0px_#000000] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none md:inline-block dark:border-white dark:bg-background dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]"
           >
             Hire Me

@@ -19,9 +19,15 @@ export default function HomePage() {
             <p className="mb-stack-lg max-w-xl border-on-background bg-surface-container-lowest p-stack-md font-mono text-body-lg font-bold text-on-background shadow-brutal dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]">
               Sor Channorakpitou, Third-year software engineering student building fast, clean, no-nonsense
               interfaces. Currently powered by React, TypeScript and too much caffeine — and if
-              my code works on the first try, I get suspicious.
+              my code works on the first try, I get suspicious. Now taking freelance projects.
             </p>
             <div className="flex flex-wrap gap-stack-md">
+              <Link
+                href="/services"
+                className="flex items-center gap-2 border-2 border-on-background bg-on-background px-8 py-4 font-mono text-label-bold uppercase text-primary-container shadow-brutal transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:border-white dark:shadow-[4px_4px_0px_0px_#ffffff]"
+              >
+                Hire Me <Icon name="handshake" />
+              </Link>
               <Link
                 href="/work"
                 className="flex items-center gap-2 bg-surface-container-lowest px-8 py-4 font-mono text-label-bold uppercase text-on-background shadow-brutal transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]"
@@ -54,7 +60,7 @@ export default function HomePage() {
             </div>
             <div className="absolute -bottom-4 -left-4 z-20 -rotate-6 md:bottom-[50px] md:left-auto md:right-[300px] bg-surface-container-lowest p-stack-sm shadow-brutal dark:text-primary-fixed dark:shadow-[4px_4px_0px_0px_#ffffff]">
               <span className="font-mono text-label-bold uppercase text-on-background dark:text-primary-fixed">
-                System Ready // 100%
+                Open for Projects // 100%
               </span>
             </div>
           </div>
