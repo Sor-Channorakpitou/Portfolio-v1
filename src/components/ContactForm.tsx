@@ -8,13 +8,13 @@ const CONTACT_EMAIL = "pitousorchannorak14@gmail.com";
 const PROJECT_TYPES = [
   "Website / Landing Page",
   "Full-Stack Web App",
-  "Bilingual EN / KH Site",
+  "Bilingual Khmer / English Site",
   "Fixes & Maintenance",
   "Internship / Job",
   "Other",
 ];
 
-const BUDGETS = ["Under $200", "$200 – $500", "$500 – $1,500", "$1,500+", "Not sure yet"];
+const BUDGETS = ["Under $150", "$150 – $400", "$400 – $1,000", "$1,000+", "Not sure yet"];
 
 const FIELD_CLASS =
   "w-full border-2 border-on-background bg-surface-container-lowest p-4 text-body-lg text-on-background placeholder:text-on-surface-variant/70 transition-all duration-200 focus:border-primary-container focus:shadow-brutal focus:outline-none";

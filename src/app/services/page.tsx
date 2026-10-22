@@ -18,52 +18,62 @@ type Service = {
   price: string;
 };
 
-// Prices are left as quotes until rates are settled; swap in "From $X" when ready.
+// Starting prices in USD, pitched at small businesses and NGOs in Cambodia.
 const SERVICES: Service[] = [
   {
     icon: "web",
     title: "Websites & Landing Pages",
     description:
-      "Fast, mobile-first sites for small businesses, events and personal brands — built to load quickly and show up on Google.",
-    includes: ["Responsive design", "SEO & social previews", "Contact form", "Deployment & domain setup"],
+      "Mobile-first sites for shops, cafés, clinics, schools and events — most of your customers will find you on their phone, so that's where it has to look best.",
+    includes: [
+      "Up to 5 pages, mobile-first",
+      "Facebook, Telegram & Google Maps links",
+      "Contact form & Google search setup",
+      "Domain, hosting & launch",
+    ],
     timeline: "1–2 weeks",
-    price: "Custom quote",
+    price: "From $150",
+  },
+  {
+    icon: "translate",
+    title: "Bilingual Khmer / English Sites",
+    description:
+      "Khmer and English from day one — proper Khmer fonts, a language switcher and content you can update in both languages.",
+    includes: ["Khmer fonts that render correctly", "One-click language switcher", "Content in both languages", "Local Google search setup"],
+    timeline: "2–3 weeks",
+    price: "From $300",
   },
   {
     icon: "deployed_code",
     title: "Full-Stack Web Apps",
     description:
-      "MVPs and internal tools with real accounts, databases and dashboards — the same stack behind Seksa.",
-    includes: ["React / Next.js frontend", "FastAPI or Express backend", "PostgreSQL database", "Auth & admin panel"],
-    timeline: "3–8 weeks",
-    price: "Custom quote",
-  },
-  {
-    icon: "translate",
-    title: "Bilingual EN / KH Sites",
-    description:
-      "English and Khmer from day one — proper Khmer fonts, a language switcher and content that's easy to update in both.",
-    includes: ["Khmer typography", "Language switcher", "Translatable content", "Local SEO"],
-    timeline: "1–3 weeks",
-    price: "Custom quote",
+      "Booking systems, online menus with orders, member portals and internal tools — real accounts, databases and dashboards, the same stack behind Seksa.",
+    includes: [
+      "Admin dashboard to manage your data",
+      "User accounts & roles",
+      "Telegram notifications for new orders",
+      "KHQR / ABA PayWay payments (on request)",
+    ],
+    timeline: "4–8 weeks",
+    price: "From $800",
   },
   {
     icon: "build",
     title: "Fixes & Maintenance",
     description:
-      "Something broken, slow or out of date? I'll find it, fix it and keep it running.",
-    includes: ["Bug fixes", "Performance tuning", "Content updates", "Monthly check-ins"],
+      "Something broken, slow or out of date? I'll find it, fix it and keep your site running.",
+    includes: ["Bug fixes", "Speed improvements", "Content & price updates", "Monthly backups & check-ins"],
     timeline: "Ongoing",
-    price: "Hourly or monthly",
+    price: "From $40 / month",
   },
 ];
 
 const PROCESS = [
-  { step: "01", title: "Brief", description: "Tell me what you need. We'll get on a short call or chat to pin down goals." },
-  { step: "02", title: "Proposal", description: "A clear scope, timeline and fixed price — no surprises later." },
-  { step: "03", title: "Build", description: "Weekly progress updates with a live preview link you can click through." },
-  { step: "04", title: "Launch", description: "I deploy it, connect your domain and hand over everything you own." },
-  { step: "05", title: "Support", description: "Two weeks of free fixes after launch, then optional maintenance." },
+  { step: "01", title: "Brief", description: "Message me or meet for a coffee in Phnom Penh — in Khmer or English. Tell me what you need." },
+  { step: "02", title: "Quote", description: "A clear scope, timeline and fixed price in USD — no surprises later." },
+  { step: "03", title: "Build", description: "Weekly updates with a live preview link you can open on your phone." },
+  { step: "04", title: "Launch", description: "I put it online, connect your domain and hand over every login." },
+  { step: "05", title: "Support", description: "One month of free fixes after launch, then optional maintenance." },
 ];
 
 // Add real quotes here as they come in; the section stays hidden while this is empty.
@@ -73,32 +83,42 @@ const FAQ = [
   {
     question: "How does payment work?",
     answer:
-      "50% upfront to book the project, 50% on launch. Bank transfer (ABA, ACLEDA) or other methods by arrangement.",
+      "Prices are in USD. 50% deposit to start, 50% before the site goes live. Pay by ABA, ACLEDA, Wing or any KHQR banking app — or cash if we meet in Phnom Penh.",
   },
   {
-    question: "Do I own the code and the website?",
+    question: "Are there any running costs?",
     answer:
-      "Yes. Once the final payment is made, the code, domain and accounts are yours. I hand over everything.",
+      "A .com domain is about $10–15 a year. Hosting for most small sites is free; bigger apps with a database usually cost $5–25 a month. I'll tell you the exact costs before we start.",
   },
   {
-    question: "Can you handle hosting and the domain?",
+    question: "Can I get a .com.kh domain?",
     answer:
-      "Yes. I'll set up hosting and connect your domain, in your name, so you're never locked in to me.",
+      "Yes, but .com.kh domains are registered through local providers and need business registration documents. I can help you through it, or start with a .com while you sort the paperwork.",
   },
   {
-    question: "How many revisions do I get?",
+    question: "Do I own the website?",
     answer:
-      "Two rounds of revisions are included in every project. Bigger changes to the scope get a separate quote first.",
+      "Yes. The domain and hosting are registered in your name, and once the final payment is made the code is yours too. You're never locked in to me.",
+  },
+  {
+    question: "Can we meet in person?",
+    answer:
+      "Yes — I'm based in Phnom Penh and happy to meet. For everything else, Telegram, Facebook Messenger or a quick Google Meet call works.",
+  },
+  {
+    question: "How many changes can I ask for?",
+    answer:
+      "Two rounds of revisions are included. New features or extra pages after we agree on the scope get a separate quote first.",
   },
   {
     question: "What happens after launch?",
     answer:
-      "Two weeks of free bug fixes. After that, you can book changes as needed or go on a monthly maintenance plan.",
+      "One month of free bug fixes. After that, book updates when you need them or go on a monthly plan from $40.",
   },
   {
     question: "You're a student — will you have time?",
     answer:
-      "I only take on as many projects as I can deliver well, and I'll give you a realistic timeline up front.",
+      "I only take on as many projects as I can deliver well, plan around my exam periods and give you a realistic deadline up front.",
   },
 ];
 
@@ -115,7 +135,7 @@ export default function ServicesPage() {
         </h1>
         <p className="max-w-2xl text-body-lg text-on-surface-variant">
           I build websites and web apps for businesses, organisations and founders — fast, clean and
-          shipped on time. Based in Phnom Penh, working with clients anywhere.
+          shipped on time. Based in Phnom Penh, working in Khmer or English.
         </p>
       </section>
 
@@ -214,7 +234,7 @@ export default function ServicesPage() {
       <section className="mt-section-gap flex flex-col items-start gap-stack-md border-4 border-on-background bg-primary-container p-stack-lg shadow-brutal md:flex-row md:items-center md:justify-between dark:shadow-[4px_4px_0px_0px_#ffffff]">
         <div>
           <h2 className="font-headline text-headline-lg uppercase text-black">Got a project?</h2>
-          <p className="text-body-lg text-black">Send me a message — I reply within 24 hours.</p>
+          <p className="text-body-lg text-black">Send me a message — I&apos;ll reply within a day with a free quote.</p>
         </div>
         <div className="flex flex-wrap gap-stack-md">
           <Link
