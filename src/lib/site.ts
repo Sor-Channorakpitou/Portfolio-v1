@@ -5,3 +5,7 @@ export const SITE_URL =
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : "http://localhost:3000");
+
+// Telegram contact link, e.g. "https://t.me/yourhandle". Telegram buttons stay
+// hidden until this is set.
+export const TELEGRAM_URL = "";

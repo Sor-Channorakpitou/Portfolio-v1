@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Icon from "@/components/Icon";
+import { TELEGRAM_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -137,12 +138,24 @@ export default function ServicesPage() {
           <h2 className="font-headline text-headline-lg uppercase text-black">Got a project?</h2>
           <p className="text-body-lg text-black">Send me a message — I reply within 24 hours.</p>
         </div>
-        <Link
-          href="/about#contact"
-          className="flex items-center gap-2 border-2 border-black bg-white px-8 py-4 font-mono text-label-bold uppercase text-black shadow-[4px_4px_0px_0px_#000000] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
-        >
-          Start a Project <Icon name="arrow_forward" />
-        </Link>
+        <div className="flex flex-wrap gap-stack-md">
+          <Link
+            href="/about#contact"
+            className="flex items-center gap-2 border-2 border-black bg-white px-8 py-4 font-mono text-label-bold uppercase text-black shadow-[4px_4px_0px_0px_#000000] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+          >
+            Start a Project <Icon name="arrow_forward" />
+          </Link>
+          {TELEGRAM_URL && (
+            <a
+              href={TELEGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border-2 border-black bg-black px-8 py-4 font-mono text-label-bold uppercase text-primary-container shadow-[4px_4px_0px_0px_#ffffff] transition-all duration-200 hover:translate-x-1 hover:translate-y-1 hover:shadow-none"
+            >
+              Chat on Telegram <Icon name="send" />
+            </a>
+          )}
+        </div>
       </section>
     </main>
   );

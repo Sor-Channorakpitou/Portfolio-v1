@@ -31,12 +31,13 @@ export const metadata: Metadata = {
     template: "%s — VzTu",
   },
   description:
-    "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships.",
+    "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships and freelance projects.",
   keywords: [
     "Sor Channorakpitou",
     "portfolio",
     "software engineering",
     "full stack developer",
+    "freelance web developer",
     "CADT",
     "Cambodia",
     "React",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     siteName: "VzTu Portfolio",
     title: "Sor Channorakpitou — Software Engineering Portfolio",
     description:
-      "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships.",
+      "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships and freelance projects.",
     images: [
       {
         url: "/hero.jpg",
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Sor Channorakpitou — Software Engineering Portfolio",
     description:
-      "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships.",
+      "Sor Channorakpitou — Computer Science student at CADT building full-stack web apps with React, Express and PostgreSQL. Open to software engineering internships and freelance projects.",
     images: ["/hero.jpg"],
   },
   robots: {

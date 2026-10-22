@@ -1,5 +1,6 @@
 import Icon from "@/components/Icon";
 import ContactForm from "@/components/ContactForm";
+import { TELEGRAM_URL } from "@/lib/site";
 
 type Skill = { name: string; level: number; learning?: boolean };
 type SkillGroup = { category: string; skills: Skill[] };
@@ -180,6 +181,9 @@ const CONTACT_CHANNELS = [
   { icon: "mail", label: "pitousorchannorak14@gmail.com", href: "https://mail.google.com/mail/?view=cm&fs=1&to=pitousorchannorak14@gmail.com" },
   { icon: "link", label: "github.com/Sor-Channorakpitou", href: "https://github.com/Sor-Channorakpitou" },
   { icon: "share", label: "linkedin.com/in/sor-channorakpitou-03496a385", href: "https://www.linkedin.com/in/sor-channorakpitou-03496a385" },
+  ...(TELEGRAM_URL
+    ? [{ icon: "send", label: TELEGRAM_URL.replace("https://", ""), href: TELEGRAM_URL }]
+    : []),
 ];
 
 export default function AboutPage() {

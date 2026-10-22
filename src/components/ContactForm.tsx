@@ -5,6 +5,20 @@ import Icon from "./Icon";
 
 const CONTACT_EMAIL = "pitousorchannorak14@gmail.com";
 
+const PROJECT_TYPES = [
+  "Website / Landing Page",
+  "Full-Stack Web App",
+  "Bilingual EN / KH Site",
+  "Fixes & Maintenance",
+  "Internship / Job",
+  "Other",
+];
+
+const BUDGETS = ["Under $200", "$200 – $500", "$500 – $1,500", "$1,500+", "Not sure yet"];
+
+const FIELD_CLASS =
+  "w-full border-2 border-on-background bg-surface-container-lowest p-4 text-body-lg text-on-background placeholder:text-on-surface-variant/70 transition-all duration-200 focus:border-primary-container focus:shadow-brutal focus:outline-none";
+
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
 
@@ -15,10 +29,13 @@ export default function ContactForm() {
     const name = String(data.get("name") ?? "");
     const email = String(data.get("email") ?? "");
     const message = String(data.get("message") ?? "");
+    const project = String(data.get("project") ?? "") || "Not specified";
+    const budget = String(data.get("budget") ?? "") || "Not specified";
+    const deadline = String(data.get("deadline") ?? "") || "Not specified";
 
     const subject = encodeURIComponent(`[Portfolio] Transmission from ${name}`);
     const body = encodeURIComponent(
-      `IDENTIFIER: ${name}\nROUTING PROTOCOL: ${email}\n\nPAYLOAD:\n${message}`,
+      `IDENTIFIER: ${name}\nROUTING PROTOCOL: ${email}\nPROJECT TYPE: ${project}\nBUDGET: ${budget}\nDEADLINE: ${deadline}\n\nPAYLOAD:\n${message}`,
     );
     window.open(
       `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT_EMAIL}&su=${subject}&body=${body}`,
@@ -34,6 +51,11 @@ export default function ContactForm() {
   const fields = [
     { id: "name", label: "IDENTIFIER (NAME)", placeholder: "ENTER IDENTIFIER", type: "text" },
     { id: "email", label: "ROUTING PROTOCOL (EMAIL)", placeholder: "ENTER ROUTING PROTOCOL", type: "email" },
+  ];
+
+  const selects = [
+    { id: "project", label: "PROJECT TYPE", options: PROJECT_TYPES },
+    { id: "budget", label: "BUDGET (USD)", options: BUDGETS },
   ];
 
   return (
@@ -53,6 +75,32 @@ export default function ContactForm() {
           />
         </div>
       ))}
+      <div className="grid grid-cols-1 gap-stack-md sm:grid-cols-2">
+        {selects.map((select) => (
+          <div key={select.id} className="flex flex-col gap-2">
+            <label className="font-mono text-label-bold uppercase text-on-background" htmlFor={select.id}>
+              {select.label}
+            </label>
+            <select
+              id={select.id}
+              name={select.id}
+              defaultValue=""
+              className={FIELD_CLASS}
+            >
+              <option value="">SELECT (OPTIONAL)</option>
+              {select.options.map((option) => (
+                <option key={option}>{option}</option>
+              ))}
+            </select>
+          </div>
+        ))}
+      </div>
+      <div className="flex flex-col gap-2">
+        <label className="font-mono text-label-bold uppercase text-on-background" htmlFor="deadline">
+          DEADLINE (OPTIONAL)
+        </label>
+        <input id="deadline" name="deadline" type="text" placeholder="E.G. END OF DECEMBER" className={FIELD_CLASS} />
+      </div>
       <div className="flex flex-col gap-2">
         <label className="font-mono text-label-bold uppercase text-on-background" htmlFor="message">
           PAYLOAD
