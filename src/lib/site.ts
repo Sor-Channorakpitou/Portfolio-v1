@@ -8,4 +8,4 @@ export const SITE_URL =
 
 // Telegram contact link, e.g. "https://t.me/yourhandle". Telegram buttons stay
 // hidden until this is set.
-export const TELEGRAM_URL = "";
+export const TELEGRAM_URL: string = "";

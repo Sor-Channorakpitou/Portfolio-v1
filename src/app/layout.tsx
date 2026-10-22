@@ -3,6 +3,7 @@ import { Geist, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import BottomNav from "@/components/BottomNav";
+import { Analytics } from "@vercel/analytics/next";
 import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -108,6 +109,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main className="flex-grow">{children}</main>
         <Footer />
         <BottomNav />
+        <Analytics />
       </body>
     </html>
   );

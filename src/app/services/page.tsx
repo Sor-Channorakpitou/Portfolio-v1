@@ -66,6 +66,42 @@ const PROCESS = [
   { step: "05", title: "Support", description: "Two weeks of free fixes after launch, then optional maintenance." },
 ];
 
+// Add real quotes here as they come in; the section stays hidden while this is empty.
+const TESTIMONIALS: { quote: string; name: string; role: string }[] = [];
+
+const FAQ = [
+  {
+    question: "How does payment work?",
+    answer:
+      "50% upfront to book the project, 50% on launch. Bank transfer (ABA, ACLEDA) or other methods by arrangement.",
+  },
+  {
+    question: "Do I own the code and the website?",
+    answer:
+      "Yes. Once the final payment is made, the code, domain and accounts are yours. I hand over everything.",
+  },
+  {
+    question: "Can you handle hosting and the domain?",
+    answer:
+      "Yes. I'll set up hosting and connect your domain, in your name, so you're never locked in to me.",
+  },
+  {
+    question: "How many revisions do I get?",
+    answer:
+      "Two rounds of revisions are included in every project. Bigger changes to the scope get a separate quote first.",
+  },
+  {
+    question: "What happens after launch?",
+    answer:
+      "Two weeks of free bug fixes. After that, you can book changes as needed or go on a monthly maintenance plan.",
+  },
+  {
+    question: "You're a student — will you have time?",
+    answer:
+      "I only take on as many projects as I can deliver well, and I'll give you a realistic timeline up front.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <main className="mx-auto w-full max-w-page flex-grow px-margin-mobile py-section-gap md:px-gutter">
@@ -131,6 +167,48 @@ export default function ServicesPage() {
             </li>
           ))}
         </ol>
+      </section>
+
+      {TESTIMONIALS.length > 0 && (
+        <section className="mt-section-gap">
+          <div className="mb-stack-lg border-b-4 border-on-background pb-stack-md">
+            <h2 className="font-headline text-headline-lg uppercase text-on-background">KIND WORDS</h2>
+          </div>
+          <div className="grid grid-cols-1 gap-gutter md:grid-cols-2 lg:grid-cols-3">
+            {TESTIMONIALS.map((testimonial) => (
+              <figure
+                key={testimonial.name}
+                className="flex flex-col gap-stack-md border-2 border-on-background bg-surface-container-lowest p-stack-lg shadow-brutal"
+              >
+                <Icon name="format_quote" filled className="text-[40px] text-primary" />
+                <blockquote className="text-body-lg text-on-surface">{testimonial.quote}</blockquote>
+                <figcaption className="mt-auto font-mono text-label-bold uppercase text-on-surface-variant">
+                  {testimonial.name} {"//"} {testimonial.role}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section className="mt-section-gap">
+        <div className="mb-stack-lg border-b-4 border-on-background pb-stack-md">
+          <h2 className="font-headline text-headline-lg uppercase text-on-background">FAQ</h2>
+        </div>
+        <div className="grid grid-cols-1 gap-stack-md md:grid-cols-2">
+          {FAQ.map((item) => (
+            <details
+              key={item.question}
+              className="group h-fit border-2 border-on-background bg-surface-container-lowest shadow-brutal"
+            >
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-stack-md font-mono text-label-bold uppercase text-on-background group-open:border-b-2 group-open:border-on-background group-open:bg-electric-cyan dark:group-open:text-on-primary-fixed [&::-webkit-details-marker]:hidden">
+                {item.question}
+                <Icon name="add" className="shrink-0 transition-transform group-open:rotate-45" />
+              </summary>
+              <p className="p-stack-md text-body-md text-on-surface-variant">{item.answer}</p>
+            </details>
+          ))}
+        </div>
       </section>
 
       <section className="mt-section-gap flex flex-col items-start gap-stack-md border-4 border-on-background bg-primary-container p-stack-lg shadow-brutal md:flex-row md:items-center md:justify-between dark:shadow-[4px_4px_0px_0px_#ffffff]">
