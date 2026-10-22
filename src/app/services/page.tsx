@@ -18,7 +18,7 @@ type Service = {
   price: string;
 };
 
-// Starting prices in USD, pitched at small businesses and NGOs in Cambodia.
+// Pitched at small businesses and NGOs in Cambodia. Prices are agreed per project.
 const SERVICES: Service[] = [
   {
     icon: "web",
@@ -32,7 +32,7 @@ const SERVICES: Service[] = [
       "Domain, hosting & launch",
     ],
     timeline: "1–2 weeks",
-    price: "From $150",
+    price: "Negotiable",
   },
   {
     icon: "translate",
@@ -41,7 +41,7 @@ const SERVICES: Service[] = [
       "Khmer and English from day one — proper Khmer fonts, a language switcher and content you can update in both languages.",
     includes: ["Khmer fonts that render correctly", "One-click language switcher", "Content in both languages", "Local Google search setup"],
     timeline: "2–3 weeks",
-    price: "From $300",
+    price: "Negotiable",
   },
   {
     icon: "deployed_code",
@@ -55,7 +55,7 @@ const SERVICES: Service[] = [
       "KHQR / ABA PayWay payments (on request)",
     ],
     timeline: "4–8 weeks",
-    price: "From $800",
+    price: "Negotiable",
   },
   {
     icon: "build",
@@ -64,13 +64,13 @@ const SERVICES: Service[] = [
       "Something broken, slow or out of date? I'll find it, fix it and keep your site running.",
     includes: ["Bug fixes", "Speed improvements", "Content & price updates", "Monthly backups & check-ins"],
     timeline: "Ongoing",
-    price: "From $40 / month",
+    price: "Negotiable",
   },
 ];
 
 const PROCESS = [
   { step: "01", title: "Brief", description: "Message me or meet for a coffee in Phnom Penh — in Khmer or English. Tell me what you need." },
-  { step: "02", title: "Quote", description: "A clear scope, timeline and fixed price in USD — no surprises later." },
+  { step: "02", title: "Quote", description: "A clear scope, timeline and a price we agree on together — no surprises later." },
   { step: "03", title: "Build", description: "Weekly updates with a live preview link you can open on your phone." },
   { step: "04", title: "Launch", description: "I put it online, connect your domain and hand over every login." },
   { step: "05", title: "Support", description: "One month of free fixes after launch, then optional maintenance." },
@@ -83,7 +83,7 @@ const FAQ = [
   {
     question: "How does payment work?",
     answer:
-      "Prices are in USD. 50% deposit to start, 50% before the site goes live. Pay by ABA, ACLEDA, Wing or any KHQR banking app — or cash if we meet in Phnom Penh.",
+      "We agree on a price together after the brief, quoted in USD. 50% deposit to start, 50% before the site goes live. Pay by ABA, ACLEDA, Wing or any KHQR banking app — or cash if we meet in Phnom Penh.",
   },
   {
     question: "Are there any running costs?",
@@ -113,7 +113,7 @@ const FAQ = [
   {
     question: "What happens after launch?",
     answer:
-      "One month of free bug fixes. After that, book updates when you need them or go on a monthly plan from $40.",
+      "One month of free bug fixes. After that, book updates when you need them or go on a monthly maintenance plan.",
   },
   {
     question: "You're a student — will you have time?",
